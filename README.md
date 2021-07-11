@@ -49,6 +49,42 @@ Note that, we included the intermediary JMP executable scripts under the `experi
 
 #### Step 3 Re-run SATune.
 
-We have included the precompile `satune.jar` file un the `experiment/tools/` directory along with instructions in `experiments/tools/README.md`.
+##### 3.1 Prepare Dataset Files
 
-TODO continue from here.
+`scripts/generateArffFromStats.py` file consumes the stats-all.txt file and generates an arff file under `tools/<tool>/data`.
+Then, `createPWSplits.py` consumes the arff file form the previous step and partitions the datapoints into 5 cross validation splits based on the splitting defined in the files under `metadata/splits`.
+
+(Before moving forward, make sure all the dependencies are installed).
+
+##### 3.3 Run SATune
+
+We have included the precompile `satune.jar` file un the `experiment/tools/` directory along with instructions in `experiments/tools/README.md`. Here is the command to run the experiments with CBMC:
+
+```shell
+cd experiments/tools
+java -jar satune.jar --tool cbmc --threshold 1.0 --seed 1234
+```
+
+That command will run CBMC for each and every benchmark program in our sample set. Eecution log will be saved under `tools/<tool>`.	
+
+
+#### Step 4 Analyze SATune results
+
+Following command will save all the result lines from the log files SATune generated:
+```shell
+grep "Final result:" log_anneal_cbmc_* > satune-stats/stats-cbmc.csv
+```
+
+Now, some trivial changes in `stats-cbmc.csv`. First remove the `Final result:` prefixes from each line. Then add the header (see satune-stats/stats-paper.csv)
+At this point, `stats-cbmc.csv` should be of the same format with `satune-stats/stats-paper.csv`. We repeat this process for the other three verification tools.
+
+
+We have two scripts under the scripts directory:
+
+- `analyzeTime.R` will create the Fig.3 in the paper using the time stats file under the satune-stats directory.
+- `analyzePerformance.py` and `analyzePerformance2.py` will compute the performance results in Table-4
+
+
+# Contact Us
+
+Please email us at ukoc@cs.umd.edu or austin.mordahl@utdallas.edu if you have any question.

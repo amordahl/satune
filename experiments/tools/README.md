@@ -38,7 +38,7 @@ Each subdirectory contain tool specific artifacts:
  - Config-space-Xopts.txt the configuration space
  - Configs-Xopts-t3-CA.txt sample configurations
  - `run_exp.py` runs the the ground-truth generation dataset.
- - `run_defconfig.py` runs the tools for each benchamrk in our sample set using the default configuration in Config-default.txt
+ - `run_defconfig.py` runs the tools for each benchmark in our sample set using the default configuration in Config-default.txt
 
 
 ### CBMC
