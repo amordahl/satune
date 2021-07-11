@@ -9,7 +9,7 @@ BENCH_DIR='{}/experiments/sv-comp/benchmarks/c'.format(BASE_DIR)  # TODO adjust 
 configsFile='Configs-21opts-t3-CA.txt'
 
 def runPart(part):
-	samplesFile='{}/metadata/tasks/c-tasks-p{}.txt'.format(BASE_DIR, part)
+	samplesFile='{}/experiments/metadata/tasks/c-tasks-p{}.txt'.format(BASE_DIR, part)
 	f1 = open(samplesFile.format(part),'r')
 	samples = f1.read().split('\n')
 	f1.close()

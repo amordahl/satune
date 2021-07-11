@@ -3,8 +3,8 @@
 import sys,re,os
 import subprocess as sp
 
-BASE_DIR='{}/sv'.format(str(os.getenv("HOME")))
-BENCH_DIR='{}/sv-comp/benchmarks/c'.format(BASE_DIR)
+BASE_DIR='{}/ssatune'.format(str(os.getenv("HOME")))
+BENCH_DIR='{}/experiments/sv-comp/benchmarks/c'.format(BASE_DIR)
 
 samplesFile='{}/data/tasks/c-tasks-all.txt'.format(BASE_DIR)
 f1 = open(samplesFile,'r')

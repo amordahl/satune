@@ -3,8 +3,8 @@
 import sys,re,os
 import subprocess as sp
 
-BASE_DIR='{}/sv'.format(str(os.getenv("HOME")))
-BENCH_DIR='{}/sv-comp/benchmarks/c'.format(BASE_DIR)
+BASE_DIR='{}/satune'.format(str(os.getenv("HOME")))
+BENCH_DIR='{}/experiments/sv-comp/benchmarks/c'.format(BASE_DIR)
 
 f1 = open('cache.txt','r')
 lines = f1.read().split('\n')
@@ -15,7 +15,7 @@ for l in lines:
 
 def runPart(part):
     configsFile='Configs-16opts-t3-CA.txt'.format(configPart)
-    samplesFile='{}/metadata/tasks/c-tasks-p{}.txt'.format(BASE_DIR, taskPart)
+    samplesFile='{}/experiments/metadata/tasks/c-tasks-p{}.txt'.format(BASE_DIR, taskPart)
     f1 = open(samplesFile.format(taskPart),'r')
     samples = f1.read().split('\n')
     f1.close()

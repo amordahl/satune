@@ -11,7 +11,7 @@ probFile='{}/properties/assert.prp'.format(BENCH_DIR)
 commonJar='{}/common'.format(BENCH_DIR)
 
 def runPart(part):
-	samplesFile='{}/data/tasks/java-tasks-p{}.txt'.format(BASE_DIR, part)
+	samplesFile='{}/experiments/metadata/tasks/java-tasks-p{}.txt'.format(BASE_DIR, part)
 	f1 = open(samplesFile.format(part),'r')
 	samples = f1.read().split('\n')
 	f1.close()

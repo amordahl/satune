@@ -3,13 +3,13 @@
 import sys,re,os
 import subprocess as sp
 
-BASE_DIR='{}/sv'.format(str(os.getenv("HOME")))
-BENCH_DIR='{}/sv-comp/benchmarks/java'.format(BASE_DIR)
+BASE_DIR='{}/satune'.format(str(os.getenv("HOME")))
+BENCH_DIR='{}/experiments/sv-comp/benchmarks/java'.format(BASE_DIR)
 
 probFile='{}/properties/assert.prp'.format(BENCH_DIR)
 commonJar='{}/common'.format(BENCH_DIR)
 
-samplesFile='{}/data/tasks/java-tasks-all.txt'.format(BASE_DIR)
+samplesFile='{}/experiments/metadata/tasks/java-tasks-all.txt'.format(BASE_DIR)
 f1 = open(samplesFile,'r')
 programs = f1.read().splitlines()
 f1.close()
