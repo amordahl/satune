@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.5
+#!/usr/bin/env python
 
 import sys,re,os
 import subprocess as sp
@@ -21,7 +21,7 @@ def runPart(part):
 	for config in configs:
 		for sample in samples:
 			srcFile, probFile = ['{}/{}'.format(BENCH_DIR, item) for item in sample.split(',')]
-			cmd = ['cbmc', '--propertyfile', probFile, srcFile] + config.split(' ')
+			cmd = ['./cbmc', '--propertyfile', probFile, srcFile] + config.split(' ')
 			try:
 				outs = sp.call(cmd, stdout=f, stderr=f)
 				f.write(config + ',' + sample + ',' + str(outs)+'\n')

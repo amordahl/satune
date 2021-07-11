@@ -1,10 +1,10 @@
-#!/usr/bin/env python3.5
+#!/usr/bin/env python
 
 import sys,re,os
 import subprocess as sp
 
-BASE_DIR='{}/sv'.format(str(os.getenv("HOME")))
-BENCH_DIR='{}/sv-comp/benchmarks/java'.format(BASE_DIR)
+BASE_DIR='{}/satune'.format(str(os.getenv("HOME")))
+BENCH_DIR='{}/experiments/sv-comp/benchmarks/java'.format(BASE_DIR)
 
 configsFile='Configs-27opts-t3-CA.txt'
 probFile='{}/properties/assert.prp'.format(BENCH_DIR)

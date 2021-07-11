@@ -2,13 +2,27 @@
 
 Get sv-benchmarks repository under here (do not check it in our repo, it is huge):
 ```
-git clone https://github.com/sosy-lab/sv-benchmarks.git
-cd sv-benchmarks
+git clone https://github.com/sosy-lab/sv-benchmarks.git benchmarks
+cd benchmarks
 git checkout svcomp18
 ```
-Note: for Java, we used svcomp19 tag of the sv-bechmarks; i.e,; `git checkout svcomp19`
 
-## Optionally :
-git clone https://github.com/sosy-lab/benchexec.git
+Not we can remove everything but the `c` directory. This directory contain all the benchmarks used in SV-COMP 2018.
+We only need the ones that are listed in experiments/metadata/taks/c-tasks-all.txt. Other can be removed if disk space is a concern.
 
-Read benchexec Wiki to understand what it is for
+Now, we repeat the proces to get the Java benchmarks from SV-COMP 2019.
+
+```
+git clone https://github.com/sosy-lab/sv-benchmarks.git benchmarks-tmp
+cd benchmarks-tmp
+git checkout svcomp19
+```
+
+Remove everthing but the java directory. Then move this directory under the `benchmarks` dir:
+```shell
+mv benchmarks-tmp/java benchmarks/java
+rm -fr benchmarks-tmp
+```
+
+
+Benchmarks all set.
