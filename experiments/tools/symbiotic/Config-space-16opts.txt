@@ -1,0 +1,16 @@
+--explicit-symbolic:on,off
+--libc=klee:on,off
+--malloc-never-fails:on,off
+--no-slice:on,off
+--no-prepare:on,off
+--no-kernel:on,off
+--no-libc:on,off
+--no-posix:on,off
+--overflow-with-clang:on,off
+--require-slicer:on,off
+--undefined-are-pure:on,off
+--undefined-retval-nosym:on,off
+--pta:fs,fi,inv
+--repeat-slicing:1,2,3,5,10
+optimize-before:off,before-conservative,before-O2,before-O3
+optimize-after:off,after-conservative,after-O2,after-O3

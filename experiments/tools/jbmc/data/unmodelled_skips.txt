@@ -1,0 +1,13 @@
+jbmc-regression/RegexMatches01
+jbmc-regression/RegexMatches02
+jbmc-regression/RegexSubstitution01
+jbmc-regression/RegexSubstitution02
+jbmc-regression/RegexSubstitution03
+jbmc-regression/StringBuilderCapLen01
+jbmc-regression/StringBuilderCapLen04
+jbmc-regression/StringCompare01
+jbmc-regression/StringCompare02
+jbmc-regression/StringCompare03
+jbmc-regression/StringValueOf01
+jbmc-regression/Validate01
+jbmc-regression/Validate02

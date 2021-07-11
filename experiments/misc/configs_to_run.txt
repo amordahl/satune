@@ -1,0 +1,12 @@
+CBMC
+best performance: '--drop-unused-functions --full-slice --no-assumptions --no-self-loops-to-assumptions --nondet-static --refine-strings --depth 100 --unwind 100 --max-nondet-tree-depth 2000 --mm tso --arrays-uf-always --round-to-plus-inf --cprover-smt2'
+best precision: '--unwind 100 --mm sc --round-to-nearest'
+
+Jayhorn
+best performance: '-specs -bounded-heap-size 10 -heap-limit -1 -heap-mode unbounded -initial-heap-size 10 -inline-count -1 -inline-size 10 -mem-prec 4 -solver spacer -step-heap-size 1'
+best precision: '-bounded-heap-size 10 -heap-limit -1 -heap-mode auto -initial-heap-size 1 -inline-count -1 -inline-size -1 -mem-prec 3 -solver eldarica -step-heap-size 1'
+		
+JBMC:
+'--unwind 100'
+
+Symbiotic: just plain see the run_defconfig.py for this tool

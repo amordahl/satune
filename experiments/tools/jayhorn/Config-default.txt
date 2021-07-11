@@ -1,0 +1,12 @@
+-rta off
+-specs off
+-bounded-heap-size 10
+-heap-limit -1
+-heap-mode auto
+-initial-heap-size 1
+-inline-count -1
+-inline-size -1
+-mem-prec 3
+-solver eldarica
+-step-heap-size 1
+-solver-options off

@@ -1,0 +1,509 @@
+﻿New Table( "Symbiotic-Configs.jmp",
+	Add Rows( 82 ),
+	New Script(
+		"Source",
+		Open(
+			"$HOME/sv/tools/symbiotic/results/Configs.csv",
+			columns(
+				New Column( "TN", Numeric, "Continuous", Format( "Best", 12 ) ),
+				New Column( "TP", Numeric, "Continuous", Format( "Best", 12 ) ),
+				New Column( "FN", Numeric, "Continuous", Format( "Best", 12 ) ),
+				New Column( "FP", Numeric, "Continuous", Format( "Best", 12 ) ),
+				New Column( "prog", Numeric, "Continuous", Format( "Best", 12 ) ),
+				New Column( "complete",
+					Numeric,
+					"Continuous",
+					Format( "Best", 12 )
+				),
+				New Column( "score", Numeric, "Continuous", Format( "Best", 12 ) ),
+				New Column( "falseRate",
+					Numeric,
+					"Continuous",
+					Format( "Best", 12 )
+				),
+				New Column( "--explicit-symbolic", Character, "Nominal" ),
+				New Column( "--libc=klee", Character, "Nominal" ),
+				New Column( "--malloc-never-fails", Character, "Nominal" ),
+				New Column( "--no-slice", Character, "Nominal" ),
+				New Column( "--no-prepare", Character, "Nominal" ),
+				New Column( "--no-kernel", Character, "Nominal" ),
+				New Column( "--no-libc", Character, "Nominal" ),
+				New Column( "--no-posix", Character, "Nominal" ),
+				New Column( "--overflow-with-clang", Character, "Nominal" ),
+				New Column( "--require-slicer", Character, "Nominal" ),
+				New Column( "--undefined-are-pure", Character, "Nominal" ),
+				New Column( "--undefined-retval-nosym", Character, "Nominal" ),
+				New Column( "--pta", Character, "Nominal" ),
+				New Column( "--repeat-slicing",
+					Numeric,
+					"Continuous",
+					Format( "Best", 12 )
+				),
+				New Column( "optimize-before", Character, "Nominal" ),
+				New Column( "optimize-after", Character, "Nominal" )
+			),
+			Import Settings(
+				End Of Line( CRLF, CR, LF ),
+				End Of Field( Comma, CSV( 1 ) ),
+				Strip Quotes( 0 ),
+				Use Apostrophe as Quotation Mark( 0 ),
+				Use Regional Settings( 0 ),
+				Scan Whole File( 1 ),
+				Treat empty columns as numeric( 0 ),
+				CompressNumericColumns( 0 ),
+				CompressCharacterColumns( 0 ),
+				CompressAllowListCheck( 0 ),
+				Labels( 1 ),
+				Column Names Start( 1 ),
+				Data Starts( 2 ),
+				Lines To Read( "All" ),
+				Year Rule( "20xx" )
+			)
+		)
+	),
+	New Column( "TN",
+		Numeric,
+		"Continuous",
+		Format( "Best", 12 ),
+		Set Values(
+			[70, 70, 68, 60, 54, 42, 60, 85, 46, 70, 71, 60, 58, 73, 71, 60, 42, 74,
+			60, 42, 84, 55, 60, 58, 58, 42, 83, 54, 76, 60, 56, 40, 71, 53, 71, 58,
+			58, 70, 56, 60, 58, 60, 60, 71, 60, 84, 62, 70, 58, 60, 52, 58, 60, 60,
+			71, 60, 46, 85, 58, 58, 56, 58, 84, 60, 42, 43, 58, 54, 73, 60, 71, 73,
+			53, 71, 75, 58, 44, 60, 82, 73, 70, 71]
+		),
+		Set Display Width( 43 )
+	),
+	New Column( "TP",
+		Numeric,
+		"Continuous",
+		Format( "Best", 12 ),
+		Set Values(
+			[132, 76, 136, 187, 127, 123, 125, 68, 116, 136, 79, 187, 123, 188, 125,
+			177, 185, 110, 187, 185, 127, 84, 187, 122, 184, 123, 84, 126, 119, 187,
+			123, 185, 125, 82, 136, 123, 123, 140, 123, 125, 123, 125, 125, 143, 125,
+			134, 176, 141, 123, 125, 132, 185, 187, 187, 188, 125, 117, 76, 123, 126,
+			123, 125, 137, 125, 123, 154, 185, 136, 187, 187, 126, 125, 72, 133, 176,
+			184, 100, 187, 130, 187, 133, 79]
+		),
+		Set Display Width( 43 )
+	),
+	New Column( "corrects",
+		Numeric,
+		"Continuous",
+		Format( "Best", 12 ),
+		Formula( :TN + :TP ),
+		Set Display Width( 51 )
+	),
+	New Column( "FN",
+		Numeric,
+		"Continuous",
+		Format( "Best", 12 ),
+		Set Values(
+			[31, 91, 31, 1, 31, 10, 10, 91, 64, 31, 91, 1, 10, 1, 10, 4, 1, 64, 1, 1,
+			31, 90, 1, 10, 1, 10, 90, 31, 64, 1, 10, 1, 10, 90, 31, 10, 10, 30, 10,
+			10, 10, 10, 10, 30, 10, 31, 4, 30, 10, 10, 31, 1, 1, 1, 1, 10, 64, 91,
+			10, 10, 10, 10, 31, 10, 10, 4, 1, 31, 1, 1, 10, 10, 91, 31, 4, 1, 64, 1,
+			31, 1, 31, 91]
+		),
+		Set Display Width( 43 )
+	),
+	New Column( "FP",
+		Numeric,
+		"Continuous",
+		Format( "Best", 12 ),
+		Set Values(
+			[1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0,
+			0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1,
+			0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0,
+			0, 1, 1, 0, 0, 0, 0, 0, 1, 1]
+		),
+		Set Display Width( 55 )
+	),
+	New Column( "incorrects",
+		Numeric,
+		"Continuous",
+		Format( "Best", 12 ),
+		Formula( :FN + :FP ),
+		Set Selected,
+		Set Display Width( 62 )
+	),
+	New Column( "prog",
+		Numeric,
+		"Continuous",
+		Format( "Best", 12 ),
+		Set Values(
+			[670, 670, 670, 670, 670, 670, 670, 670, 670, 670, 670, 670, 670, 670,
+			670, 670, 670, 670, 670, 670, 670, 670, 670, 670, 670, 670, 670, 670,
+			670, 670, 670, 670, 670, 670, 670, 670, 670, 670, 670, 670, 670, 670,
+			670, 670, 670, 670, 670, 670, 670, 670, 670, 670, 670, 670, 670, 670,
+			670, 670, 670, 670, 670, 670, 670, 670, 670, 670, 670, 670, 670, 670,
+			670, 670, 670, 670, 670, 670, 670, 670, 670, 670, 670, 670]
+		),
+		Set Display Width( 43 )
+	),
+	New Column( "complete",
+		Numeric,
+		"Continuous",
+		Format( "Best", 12 ),
+		Set Values(
+			[234, 237, 235, 248, 213, 175, 195, 245, 227, 238, 242, 248, 191, 262,
+			206, 241, 228, 248, 248, 228, 243, 230, 248, 190, 243, 175, 257, 212,
+			260, 248, 189, 226, 206, 225, 239, 191, 191, 241, 189, 195, 191, 195,
+			195, 245, 195, 250, 243, 242, 191, 195, 215, 244, 248, 248, 260, 195,
+			228, 253, 191, 194, 189, 193, 253, 195, 175, 201, 244, 222, 261, 248,
+			207, 208, 216, 236, 256, 243, 208, 248, 243, 261, 235, 242]
+		),
+		Set Display Width( 57 )
+	),
+	New Column( "score",
+		Numeric,
+		"Continuous",
+		Format( "Best", 12 ),
+		Set Values(
+			[-736, -2696, -720, 275, -773, -113, -75, -2690, -1856, -732, -2707, 275,
+			-81, 302, -53, 169, 237, -1790, 275, 237, -713, -2702, 275, -82, 268,
+			-113, -2630, -774, -1793, 275, -85, 233, -53, -2692, -730, -81, -81,
+			-696, -85, -75, -81, -75, -75, -691, -75, -706, 156, -695, -81, -75,
+			-756, 269, 275, 275, 298, -75, -1855, -2682, -81, -78, -85, -79, -703,
+			-75, -113, 112, 269, -764, 301, 275, -52, -49, -2734, -733, 182, 268,
+			-1860, 275, -698, 301, -735, -2707]
+		),
+		Set Display Width( 43 )
+	),
+	New Column( "falseRate",
+		Numeric,
+		"Continuous",
+		Format( "Best", 12 ),
+		Set Values(
+			[13.6752136752, 38.3966244726, 13.1914893617, 0.403225806452,
+			15.0234741784, 5.71428571429, 5.12820512821, 37.5510204082,
+			28.6343612335, 13.4453781513, 38.0165289256, 0.403225806452,
+			5.23560209424, 0.381679389313, 4.85436893204, 1.65975103734,
+			0.438596491228, 25.8064516129, 0.403225806452, 0.438596491228,
+			13.1687242798, 39.5652173913, 0.403225806452, 5.26315789474,
+			0.411522633745, 5.71428571429, 35.0194552529, 15.0943396226, 25,
+			0.403225806452, 5.29100529101, 0.442477876106, 4.85436893204, 40,
+			13.3891213389, 5.23560209424, 5.23560209424, 12.8630705394,
+			5.29100529101, 5.12820512821, 5.23560209424, 5.12820512821,
+			5.12820512821, 12.6530612245, 5.12820512821, 12.8, 2.05761316872,
+			12.8099173554, 5.23560209424, 5.12820512821, 14.4186046512,
+			0.409836065574, 0.403225806452, 0.403225806452, 0.384615384615,
+			5.12820512821, 28.5087719298, 36.3636363636, 5.23560209424,
+			5.15463917526, 5.29100529101, 5.18134715026, 12.6482213439,
+			5.12820512821, 5.71428571429, 1.99004975124, 0.409836065574,
+			14.4144144144, 0.383141762452, 0.403225806452, 4.8309178744,
+			4.80769230769, 42.1296296296, 13.5593220339, 1.953125, 0.411522633745,
+			30.7692307692, 0.403225806452, 12.7572016461, 0.383141762452,
+			13.6170212766, 38.0165289256]
+		),
+		Set Display Width( 83 )
+	),
+	New Column( "--explicit-symbolic",
+		Character( 3 ),
+		"Nominal",
+		Set Values(
+			{"off", "on", "off", "on", "off", "off", "on", "on", "off", "off", "off",
+			"on", "off", "on", "on", "on", "off", "on", "on", "off", "on", "off",
+			"on", "off", "off", "off", "on", "off", "on", "on", "off", "off", "on",
+			"off", "on", "off", "off", "off", "off", "on", "off", "on", "on", "on",
+			"on", "on", "on", "off", "off", "on", "off", "off", "on", "on", "on",
+			"on", "off", "on", "off", "on", "off", "on", "on", "on", "off", "off",
+			"off", "off", "on", "on", "on", "on", "off", "on", "on", "off", "off",
+			"on", "on", "on", "off", "off"}
+		),
+		Set Display Width( 107 )
+	),
+	New Column( "--libc=klee",
+		Character( 3 ),
+		"Nominal",
+		Set Values(
+			{"off", "on", "off", "off", "on", "on", "on", "off", "off", "on", "off",
+			"off", "off", "off", "on", "on", "on", "off", "on", "off", "off", "off",
+			"off", "on", "on", "off", "on", "on", "on", "on", "off", "off", "off",
+			"on", "off", "on", "on", "off", "on", "on", "on", "off", "off", "off",
+			"off", "on", "on", "on", "on", "off", "off", "on", "on", "off", "on",
+			"off", "off", "off", "off", "on", "off", "on", "off", "off", "on", "on",
+			"off", "off", "on", "off", "on", "off", "off", "on", "on", "on", "off",
+			"off", "off", "off", "off", "on"}
+		),
+		Set Display Width( 66 )
+	),
+	New Column( "--malloc-never-fails",
+		Character( 3 ),
+		"Nominal",
+		Set Values(
+			{"off", "off", "off", "off", "off", "on", "on", "off", "off", "on",
+			"off", "off", "on", "on", "off", "on", "off", "on", "on", "on", "on",
+			"off", "on", "on", "off", "off", "off", "off", "on", "on", "off", "off",
+			"on", "on", "on", "on", "off", "off", "off", "on", "off", "on", "off",
+			"off", "on", "off", "on", "on", "on", "on", "on", "on", "on", "off",
+			"off", "off", "off", "on", "on", "off", "on", "on", "off", "on", "off",
+			"off", "off", "on", "on", "off", "on", "off", "off", "on", "off", "on",
+			"off", "off", "off", "off", "on", "off"}
+		),
+		Set Display Width( 107 )
+	),
+	New Column( "--no-slice",
+		Character( 3 ),
+		"Nominal",
+		Set Values(
+			{"off", "off", "off", "on", "off", "on", "on", "off", "off", "off",
+			"off", "on", "on", "on", "on", "off", "on", "off", "on", "on", "off",
+			"off", "on", "on", "on", "on", "off", "off", "off", "on", "on", "on",
+			"on", "off", "off", "on", "on", "off", "on", "on", "on", "on", "on",
+			"off", "on", "off", "off", "off", "on", "on", "off", "on", "on", "on",
+			"on", "on", "off", "off", "on", "on", "on", "on", "off", "on", "on",
+			"off", "on", "off", "on", "on", "on", "on", "off", "off", "off", "on",
+			"off", "on", "off", "on", "off", "off"}
+		),
+		Set Display Width( 60 )
+	),
+	New Column( "--no-prepare",
+		Character( 3 ),
+		"Nominal",
+		Set Values(
+			{"on", "off", "off", "off", "off", "off", "off", "on", "on", "on", "on",
+			"off", "off", "on", "off", "off", "off", "off", "on", "off", "on", "on",
+			"off", "on", "on", "on", "off", "on", "off", "off", "on", "on", "off",
+			"off", "on", "on", "off", "on", "on", "on", "off", "off", "on", "off",
+			"on", "off", "off", "on", "off", "off", "off", "on", "on", "off", "on",
+			"off", "on", "on", "on", "on", "off", "off", "off", "off", "off", "on",
+			"off", "on", "on", "on", "off", "on", "on", "on", "off", "on", "off",
+			"off", "off", "on", "off", "on"}
+		),
+		Set Display Width( 79 )
+	),
+	New Column( "--no-kernel",
+		Character( 3 ),
+		"Nominal",
+		Set Values(
+			{"off", "on", "on", "on", "off", "off", "on", "off", "on", "off", "on",
+			"on", "on", "on", "off", "on", "on", "off", "off", "on", "on", "on",
+			"on", "off", "off", "on", "off", "off", "on", "off", "on", "off", "off",
+			"off", "off", "on", "on", "on", "off", "on", "on", "on", "off", "on",
+			"off", "on", "off", "off", "off", "on", "on", "off", "off", "on", "on",
+			"on", "on", "off", "on", "on", "on", "off", "off", "off", "off", "off",
+			"off", "on", "off", "off", "off", "off", "off", "on", "on", "off", "off",
+			"off", "off", "on", "off", "off"}
+		),
+		Set Display Width( 70 )
+	),
+	New Column( "--no-libc",
+		Character( 3 ),
+		"Nominal",
+		Set Values(
+			{"off", "on", "on", "on", "off", "off", "on", "off", "on", "on", "on",
+			"off", "on", "on", "off", "off", "off", "off", "off", "off", "on", "on",
+			"on", "off", "off", "on", "on", "on", "on", "on", "off", "on", "off",
+			"off", "on", "on", "off", "on", "on", "on", "off", "on", "on", "off",
+			"off", "on", "on", "off", "on", "on", "off", "on", "on", "on", "off",
+			"on", "off", "off", "on", "on", "on", "off", "off", "off", "on", "off",
+			"off", "off", "off", "off", "on", "off", "off", "off", "on", "off", "on",
+			"off", "off", "off", "off", "off"}
+		),
+		Set Display Width( 53 )
+	),
+	New Column( "--no-posix",
+		Character( 3 ),
+		"Nominal",
+		Set Values(
+			{"on", "off", "on", "on", "off", "off", "off", "off", "on", "on", "on",
+			"off", "off", "off", "on", "off", "on", "off", "on", "on", "off", "on",
+			"off", "off", "on", "on", "on", "on", "off", "on", "off", "off", "on",
+			"on", "off", "on", "off", "off", "off", "off", "off", "on", "off", "off",
+			"on", "on", "off", "on", "on", "on", "on", "on", "on", "off", "on",
+			"off", "off", "off", "off", "off", "on", "off", "on", "on", "off", "off",
+			"on", "on", "off", "on", "off", "off", "on", "on", "on", "on", "off",
+			"on", "on", "on", "on", "off"}
+		),
+		Set Display Width( 64 )
+	),
+	New Column( "--overflow-with-clang",
+		Character( 3 ),
+		"Nominal",
+		Set Values(
+			{"off", "on", "off", "off", "off", "on", "on", "on", "on", "off", "on",
+			"off", "on", "off", "on", "off", "off", "on", "off", "off", "off", "on",
+			"off", "on", "off", "on", "on", "off", "on", "off", "on", "off", "on",
+			"on", "off", "on", "on", "off", "on", "on", "on", "on", "on", "off",
+			"on", "off", "off", "off", "on", "on", "off", "off", "off", "off", "off",
+			"on", "on", "on", "on", "on", "on", "on", "off", "on", "on", "off",
+			"off", "off", "off", "off", "on", "on", "on", "off", "off", "off", "on",
+			"off", "off", "off", "off", "on"}
+		),
+		Set Display Width( 107 )
+	),
+	New Column( "--require-slicer",
+		Character( 3 ),
+		"Nominal",
+		Set Values(
+			{"off", "off", "off", "on", "off", "on", "off", "off", "off", "off",
+			"off", "on", "on", "on", "on", "off", "on", "off", "on", "on", "off",
+			"off", "on", "on", "on", "off", "off", "off", "off", "on", "on", "on",
+			"on", "off", "off", "on", "on", "off", "on", "on", "off", "on", "off",
+			"off", "off", "off", "off", "off", "off", "on", "off", "on", "off", "on",
+			"on", "on", "off", "off", "on", "on", "on", "off", "off", "on", "on",
+			"off", "on", "off", "on", "on", "on", "on", "off", "off", "off", "on",
+			"off", "off", "off", "off", "off", "off"}
+		),
+		Set Display Width( 93 )
+	),
+	New Column( "--undefined-are-pure",
+		Character( 3 ),
+		"Nominal",
+		Set Values(
+			{"off", "on", "on", "off", "off", "on", "off", "off", "off", "off", "on",
+			"on", "on", "off", "on", "on", "off", "off", "on", "off", "on", "on",
+			"on", "on", "on", "off", "off", "on", "off", "on", "on", "off", "off",
+			"on", "off", "on", "off", "off", "off", "on", "on", "on", "off", "on",
+			"on", "on", "off", "on", "on", "off", "off", "off", "off", "on", "on",
+			"off", "on", "off", "on", "on", "on", "off", "off", "off", "off", "on",
+			"off", "off", "on", "on", "off", "off", "off", "off", "off", "on", "off",
+			"off", "on", "off", "on", "on"}
+		),
+		Set Display Width( 107 )
+	),
+	New Column( "--undefined-retval-nosym",
+		Character( 3 ),
+		"Nominal",
+		Set Values(
+			{"on", "off", "on", "off", "off", "off", "off", "on", "off", "on", "on",
+			"off", "on", "on", "on", "off", "off", "on", "off", "off", "on", "off",
+			"off", "on", "on", "off", "on", "off", "on", "off", "on", "off", "on",
+			"off", "off", "on", "on", "on", "on", "off", "on", "off", "off", "off",
+			"off", "on", "off", "on", "on", "off", "off", "on", "off", "off", "on",
+			"off", "off", "on", "on", "off", "on", "off", "on", "off", "off", "off",
+			"on", "off", "on", "off", "on", "on", "off", "off", "on", "on", "off",
+			"off", "on", "on", "on", "on"}
+		),
+		Set Display Width( 107 )
+	),
+	New Column( "--pta",
+		Character( 3 ),
+		"Nominal",
+		Set Values(
+			{"fs", "fs", "fs", "inv", "fi", "fi", "fi", "fs", "inv", "fi", "inv",
+			"fi", "inv", "inv", "inv", "inv", "fs", "fs", "fs", "fi", "fs", "inv",
+			"fs", "inv", "inv", "fs", "inv", "fs", "inv", "fi", "fs", "fi", "fs",
+			"fi", "fi", "fi", "inv", "fs", "fi", "inv", "fs", "inv", "fi", "fi",
+			"fi", "fi", "fs", "fi", "fs", "fs", "fi", "fi", "inv", "fs", "fi", "fi",
+			"inv", "inv", "inv", "fs", "fs", "fi", "inv", "fs", "fs", "inv", "fi",
+			"inv", "fi", "inv", "fs", "inv", "inv", "inv", "fi", "fi", "inv", "fs",
+			"inv", "fi", "fi", "fi"}
+		),
+		Set Display Width( 43 )
+	),
+	New Column( "--repeat-slicing",
+		Numeric,
+		"Ordinal",
+		Format( "Best", 12 ),
+		Set Values(
+			[5, 5, 3, 10, 10, 5, 10, 10, 1, 3, 3, 5, 2, 2, 3, 1, 5, 2, 3, 3, 10, 2,
+			3, 1, 10, 1, 2, 10, 1, 10, 10, 1, 10, 2, 3, 2, 1, 2, 3, 3, 3, 10, 1, 2,
+			10, 5, 1, 2, 2, 5, 5, 10, 5, 2, 5, 10, 1, 5, 5, 3, 1, 2, 3, 2, 3, 10, 5,
+			3, 1, 5, 1, 2, 5, 5, 1, 1, 5, 1, 10, 2, 5, 3]
+		),
+		Set Display Width( 95 )
+	),
+	New Column( "optimize-before",
+		Character,
+		"Nominal",
+		Set Values(
+			{"before-O3", "before-conservative", "before-conservative", "before-O3",
+			"off", "before-O2", "before-O3", "before-O2", "before-O2", "off",
+			"before-O2", "before-O3", "before-O3", "before-conservative", "off",
+			"off", "before-O2", "off", "before-conservative", "off", "before-O3",
+			"before-O2", "before-O2", "before-O2", "before-O3", "off",
+			"before-conservative", "before-conservative", "before-conservative",
+			"off", "off", "before-conservative", "before-conservative", "off",
+			"before-O3", "before-O3", "before-conservative", "off",
+			"before-conservative", "before-conservative", "before-O3", "before-O2",
+			"before-O2", "before-O3", "before-O2", "before-O2", "before-O3",
+			"before-O2", "before-conservative", "off", "off", "before-O2",
+			"before-O2", "before-O2", "off", "before-conservative", "before-O3",
+			"off", "before-O3", "off", "before-conservative", "before-conservative",
+			"before-O3", "before-O3", "before-O3", "off", "before-O2", "before-O2",
+			"before-O3", "before-conservative", "off", "off", "before-conservative",
+			"before-O3", "before-O3", "off", "off", "before-O2",
+			"before-conservative", "before-O2", "before-conservative", "before-O2"}
+		),
+		Set Display Width( 100 )
+	),
+	New Column( "optimize-after",
+		Character,
+		"Nominal",
+		Set Values(
+			{"off", "after-conservative", "off", "after-conservative", "after-O2",
+			"after-O3", "off", "after-O3", "off", "after-O3", "after-O3", "after-O3",
+			"off", "after-O2", "off", "after-conservative", "after-O2", "off",
+			"after-O3", "after-O2", "after-O2", "after-O3", "off", "after-O3",
+			"after-O3", "after-O3", "after-conservative", "after-O2", "after-O3",
+			"after-O3", "after-conservative", "off", "off", "after-conservative",
+			"off", "after-conservative", "after-O2", "after-O2",
+			"after-conservative", "after-O2", "after-O2", "after-O2",
+			"after-conservative", "after-O3", "off", "after-O3",
+			"after-conservative", "after-O2", "after-O3", "after-O3",
+			"after-conservative", "after-conservative", "off", "after-conservative",
+			"off", "after-O3", "off", "after-O2", "after-O2", "after-conservative",
+			"after-conservative", "off", "after-conservative", "after-O2",
+			"after-O3", "off", "after-conservative", "after-conservative",
+			"after-O3", "after-O3", "off", "after-O3", "off", "after-conservative",
+			"after-O2", "after-O2", "off", "after-O2", "after-conservative", "off",
+			"after-O2", "after-O2"}
+		),
+		Set Display Width( 100 )
+	),
+	Set Row States(
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0]
+	)
+) << Run Formulas;
+Fit Model(
+	Y( :incorrects ),
+	Effects(
+		:"--explicit-symbolic"n, :"--libc=klee"n, :"--malloc-never-fails"n,
+		:"--no-slice"n, :"--no-prepare"n, :"--no-kernel"n, :"--no-libc"n,
+		:"--no-posix"n, :"--overflow-with-clang"n, :"--require-slicer"n,
+		:"--undefined-are-pure"n, :"--undefined-retval-nosym"n, :"--pta"n,
+		:"--repeat-slicing"n, :"optimize-before"n, :"optimize-after"n
+	),
+	Personality( "Standard Least Squares" ),
+	Emphasis( "Minimal Report" ),
+	Run(
+		:incorrects << {Summary of Fit( 1 ), Analysis of Variance( 1 ),
+		Parameter Estimates( 1 ), Effect Tests( 0 ), Effect Details( 0 ),
+		Lack of Fit( 0 ), Scaled Estimates( 0 ), Plot Actual by Predicted( 0 ),
+		Plot Regression( 0 ), Plot Residual by Predicted( 0 ),
+		Plot Studentized Residuals( 0 ), Plot Effect Leverage( 0 ),
+		Plot Residual by Normal Quantiles( 0 ), Box Cox Y Transformation( 0 )}
+	),
+	SendToReport(
+		Dispatch(
+			{"Response incorrects"},
+			"Effect Summary",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response incorrects"},
+			"Summary of Fit",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response incorrects"},
+			"Analysis of Variance",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response incorrects", "Parameter Estimates"},
+			"",
+			TableBox,
+			{Sort By Column( 6, 1 )}
+		)
+	)
+);

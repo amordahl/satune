@@ -1,0 +1,12 @@
+-rta:off,on
+-specs:off,on
+-bounded-heap-size:1,10,100,1000,5000
+-heap-limit:-1,1,10,100,1000
+-heap-mode:unbounded,bounded,auto
+-initial-heap-size:1,10,100,1000,5000
+-inline-count:-1,1,10,100,1000
+-inline-size:-1,1,10,100,1000
+-mem-prec:1,2,3,4,5
+-solver:eldarica,spacer
+-step-heap-size:1,10,100,1000,5000
+-solver-options:off,abstract,abstractPO,debug

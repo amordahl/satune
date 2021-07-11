@@ -1,0 +1,16 @@
+jbmc-regression/RegexMatches01,10,incomplete,EC=10,VERIFICATION FAILED,UNKNOWN
+jbmc-regression/RegexMatches02,10,incomplete,EC=10,VERIFICATION FAILED,UNKNOWN
+jbmc-regression/RegexSubstitution01,10,incomplete,EC=10,VERIFICATION FAILED,UNKNOWN
+jbmc-regression/RegexSubstitution02,10,incomplete,EC=10,VERIFICATION FAILED,UNKNOWN
+jbmc-regression/RegexSubstitution03,10,incomplete,EC=10,VERIFICATION FAILED,UNKNOWN
+jbmc-regression/StringBuilderCapLen01,10,incomplete,EC=10,VERIFICATION FAILED,UNKNOWN
+jbmc-regression/StringBuilderCapLen04,10,incomplete,EC=10,VERIFICATION FAILED,UNKNOWN
+jbmc-regression/StringCompare01,10,incomplete,EC=10,VERIFICATION FAILED,UNKNOWN
+jbmc-regression/StringCompare02,10,incomplete,EC=10,VERIFICATION FAILED,UNKNOWN
+jbmc-regression/StringCompare03,10,incomplete,EC=10,VERIFICATION FAILED,UNKNOWN
+jbmc-regression/StringValueOf01,10,incomplete,EC=10,VERIFICATION FAILED,UNKNOWN
+jbmc-regression/Validate01,10,incomplete,EC=10,VERIFICATION FAILED,UNKNOWN
+jbmc-regression/Validate02,10,incomplete,EC=10,VERIFICATION FAILED,UNKNOWN
+
+search for this comment to remove 
+(UNK|TP|TN|FP|FN),(jbmc-regression/RegexMatches01|jbmc-regression/RegexMatches02|jbmc-regression/RegexSubstitution01|jbmc-regression/RegexSubstitution02|jbmc-regression/RegexSubstitution03|jbmc-regression/StringBuilderCapLen01|jbmc-regression/StringBuilderCapLen04|jbmc-regression/StringCompare01|jbmc-regression/StringCompare02|jbmc-regression/StringCompare03|jbmc-regression/StringValueOf01|jbmc-regression/Validate01|jbmc-regression/Validate02),.*,JBMC,.*\n

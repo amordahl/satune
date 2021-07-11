@@ -1,0 +1,12 @@
+pthread/twostage_3_false-unreach-call.i
+ldv-races/race-1_3-join_false-unreach-call.i
+ldv-races/race-2_4-container_of_false-unreach-call.i
+ldv-races/race-4_1-thread_local_vars_true-unreach-call.i
+ldv-races/race-4_2-thread_local_vars_false-unreach-call.i
+
+
+#search for this regex to remove from SATune results for symbiotic
+(UNK|TP|TN|FP|FN),(pthread/twostage_3_false-unreach-call.i|ldv-races/race-1_3-join_false-unreach-call.i|ldv-races/race-2_4-container_of_false-unreach-call.i|ldv-races/race-4_1-thread_local_vars_true-unreach-call.i|ldv-races/race-4_2-thread_local_vars_false-unreach-call.i),.*,Symbiotic,.*\n
+
+
+We have mistakenly run SATune for the above benchmarks. Symbiotic doesn't do concurrency check

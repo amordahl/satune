@@ -1,0 +1,16 @@
+--explicit-symbolic off
+--libc=klee off
+--malloc-never-fails off
+--no-slice on
+--no-prepare off
+--no-kernel off
+--no-libc off
+--no-posix off
+--overflow-with-clang off
+--require-slicer off
+--undefined-are-pure off
+--undefined-retval-nosym on
+--pta inv
+--repeat-slicing 3
+optimize-before off
+optimize-after off

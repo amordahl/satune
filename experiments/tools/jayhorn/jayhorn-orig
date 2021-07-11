@@ -1,0 +1,75 @@
+#!/bin/bash
+
+BASEDIR=`dirname $(readlink -e $0)`
+JAYHORN=$BASEDIR/jayhorn.jar
+
+# parse arguments
+BENCHMARKS=""
+PROPERTY_FILE=""
+WITNESS_FILE=""
+
+while [ -n "$1" ] ; do
+  case "$1" in
+    --propertyfile) PROPERTY_FILE="$2" ; shift 2 ;;
+    --graphml-witness) WITNESS_FILE="$2" ; shift 2 ;;
+    --version) java -jar $JAYHORN -version ; exit 0 ;;
+    *) BENCHMARKS="$BENCHMARKS $1" ; shift 1 ;;
+  esac
+done
+
+processOutput() {
+    while read line; do
+        case "$line" in
+            SAFE) echo SAFE; touch $DIR/finished ;;
+            UNSAFE) echo UNSAFE; touch $DIR/finished ;;
+            UNKNOWN) ;;
+            *) echo $line ;;
+        esac
+    done
+}
+
+# SV-COMP mode (if there is no property file)
+# In this mode JayHorn is run from benchexec/tools/jayhorn.py
+# (https://github.com/sosy-lab/benchexec)
+if [[ "$PROPERTY_FILE" != "" ]]; then
+  LD_LIBRARY_PATH=`pwd`:$LD_LIBRARY_PATH
+
+  DIR=`mktemp -d -t jayhorn-benchmark.XXXXXX`
+
+  # we ignore the property file (there is only one property at the moment)
+  # we ignore the witness file (not used yet)
+  # we just search for all java files in the given benchmark directories,
+  # build them, and then run the verifier
+  SOURCES=`find $BENCHMARKS -name "*.java"`
+  javac -d $DIR $SOURCES
+  
+  # run one process in unbounded heap mode
+      java -Xss40000k -Xmx3000m -jar $JAYHORN -inline-size 10 -j $DIR "$@" | (
+          processOutput
+      ) &
+
+  sleep 3
+
+  # and one process in bounded heap mode
+      java -Xss40000k -Xmx3000m -jar $JAYHORN -inline-size 10 -bounded-heap-size 50 -initial-heap-size 1 -j $DIR "$@" | (
+          processOutput
+      ) &
+
+  trap "rm -rf $DIR" EXIT
+
+  wait -n
+
+  if [ -f $DIR/finished ]; then
+      pkill -P $$
+  fi
+
+  wait
+
+  if [ ! -f $DIR/finished ]; then
+      echo UNKNOWN
+  fi
+
+# normal mode
+else
+  exec java -Xss20000k -jar $JAYHORN $BENCHMARKS "$@"
+fi
