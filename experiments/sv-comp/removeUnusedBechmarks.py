@@ -13,7 +13,7 @@ f1 = open(samplesFile.format(taskPart),'r')
 taskPairs = [line.split() for line in f1.read().split('\n')]
 f1.close()
 
-tasks = set([pair[0] for pair in taskPairs])
+tasks = set([pair[0].split('/')[-1] for pair in taskPairs])
 properties = set([pair[1] for pair in taskPairs])
 
 for root, _, fileNames in os.walk(BENCH_DIR):
