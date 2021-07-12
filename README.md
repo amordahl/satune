@@ -47,16 +47,16 @@ Now, we use the data analysis tool JMP [2] to conduct an effect screening study.
 
 Note that, we included the intermediary JMP executable scripts under the `experiment/jmp` directory (see `experiment/jmp/README.md`).
 
-#### Step 3 Re-run SATune.
+#### Step 3 - Re-run SATune.
 
-##### 3.1 Prepare Dataset Files
+##### 3.1 - Prepare Dataset Files
 
 `scripts/generateArffFromStats.py` file consumes the stats-all.txt file and generates an arff file under `tools/<tool>/data`.
-Then, `createPWSplits.py` consumes the arff file form the previous step and partitions the datapoints into 5 cross validation splits based on the splitting defined in the files under `metadata/splits`.
+Then, `createPWSplits.py` consumes the arff file form the previous step and partitions the datapoints into 5 cross-validation splits based on the splitting defined in the files under `metadata/splits`.
 
 (Before moving forward, make sure all the dependencies are installed).
 
-##### 3.3 Run SATune
+##### 3.3  - Run SATune
 
 We have included the precompile `satune.jar` file un the `experiment/tools/` directory along with instructions in `experiments/tools/README.md`. Here is the command to run the experiments with CBMC:
 
@@ -68,7 +68,7 @@ java -jar satune.jar --tool cbmc --threshold 1.0 --seed 1234
 That command will run CBMC for each and every benchmark program in our sample set. Eecution log will be saved under `tools/<tool>`.	
 
 
-#### Step 4 Analyze SATune results
+#### Step 4 - Analyze SATune results
 
 Following command will save all the result lines from the log files SATune generated:
 ```shell

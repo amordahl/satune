@@ -30,5 +30,5 @@ emacs -nw jayhorn
 
 5 - Test
 ```shell
-./jayhorn  --propertyfile ../../sv-comp/benchmarks/java/properties/assert.prp ../../sv-comp/benchmarks/java/common ../../sv-comp/benchmarks/java/jayhorn-recursive/SatAckermann01
+./jayhorn  --propertyfile /path/to/sv-comp/benchmarks/java/properties/assert.prp /path/to/sv-comp/benchmarks/java/common /path/to/sv-comp/benchmarks/java/jayhorn-recursive/SatAckermann01
 ```

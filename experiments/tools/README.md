@@ -1,6 +1,6 @@
 # Configuration Options
 
-- `satune.jar` created using Ecilpse IDE with the "Export Executable JAR" menu option which include all the dependencies in the jar.
+- `satune.jar` created using Ecilpse IDE with the "Export>Java>Runnable JAR File" menu option which include all the dependencies in the jar.
 
 ```shell
 (base) ugurko@redacted tools % java -jar satune.jar -h
@@ -39,22 +39,3 @@ Each subdirectory contain tool specific artifacts:
  - Configs-Xopts-t3-CA.txt sample configurations
  - `run_exp.py` runs the the ground-truth generation dataset.
  - `run_defconfig.py` runs the tools for each benchmark in our sample set using the default configuration in Config-default.txt
-
-
-### CBMC
-
-Place the cbmc-binary executable under cbmc directory
-
-### Symbiotic
-
-Install symbiotic globally.
-
-### JayHorn
-
-Place the `jayhorn` script and `jayhorn.jar` executable under jayhorn directory
-
-### JBMC
-
-Place both the jbmc-binary executable under jbmc directory
-
-Similar to cbmc, use the `run_exp.py` script to run the experiments.
