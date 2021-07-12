@@ -19,7 +19,7 @@ Experiments directory contain all the artifacts from the empirical analysis incl
 
 1. Clone this repository. 
 2. Clone the benchmarks from the sv-comp benchmark repository under the sv-comp directory as described in  `sv-comp/README.md`.
-3. Install all the dependencies for the verification tools following the instructions in `experiments/tools/README.md` (mainly, the SMT solvers).
+3. Install all the dependencies for the verification tools following the instructions in the `experiments/tools/<tool>/InstallationNotes.md` files (mainly, the SMT solvers).
 
 
 #### Step 1 - Re-run the ground-truth dataset generation experiments
@@ -43,7 +43,7 @@ Next part is tool specific. We manually grep these tools files to extract the ve
 Using `stats-all.txt`, we compute the aggregate counts of true positive/nagtive, TP/TN, false positive/negative, FP/FN for each configuration.
 The result of this manual operation is saved under 'tools/<tool>/results/Configs.csv'. The numbers in Table-II can be computed from these CSV files.
 
-Now, we use the data analysis tool JMP [2] to conduct an effect screening study. For this, we further aggregate the counts of correct (TP+TN) and incorrect (FP + FN). Then, we fit a model usingthe DOE module of JMP. This will give us the Analysis results with significant effects that configuration options and their settings have on the results (i.e., number of correct and incorrect verification runs).
+Now, we use the data analysis tool JMP [2] to conduct an effect screening study. For this, we further aggregate the counts of correct (TP+TN) and incorrect (FP + FN). Then, we fit a model using the DOE module of JMP. This will give us the Analysis results with significant effects that configuration options and their settings have on the results, i.e., number of correct and incorrect verification runs, (summarized in Table-III of the paper).
 
 Note that, we included the intermediary JMP executable scripts under the `experiment/jmp` directory (see `experiment/jmp/README.md`).
 
@@ -58,25 +58,25 @@ Then, `createPWSplits.py` consumes the arff file form the previous step and part
 
 ##### 3.3  - Run SATune
 
-We have included the precompile `satune.jar` file un the `experiment/tools/` directory along with instructions in `experiments/tools/README.md`. Here is the command to run the experiments with CBMC:
+We have included the precompile `satune.jar` file under the `experiment/tools/` directory along with instructions in `experiments/tools/README.md`. Here is the command to run the experiments with JayHorn:
 
 ```shell
 cd experiments/tools
-java -jar satune.jar --tool cbmc --threshold 1.0 --seed 1234
+java -jar satune.jar --tool jarhorn --threshold 1.0 --seed 1234 --search anneal --ml-model classification
 ```
 
-That command will run CBMC for each and every benchmark program in our sample set. Eecution log will be saved under `tools/<tool>`.	
+That command will run JayHorn for each and every benchmark program in our sample set for Java. Eecution log will be saved under tools.	
 
 
 #### Step 4 - Analyze SATune results
 
 Following command will save all the result lines from the log files SATune generated:
 ```shell
-grep "Final result:" log_anneal_cbmc_* > satune-stats/stats-cbmc.csv
+grep "Final result:" log_anneal_jayhorn_* > satune-stats/stats-jayhorn.csv
 ```
 
-Now, some trivial changes in `stats-cbmc.csv`. First remove the `Final result:` prefixes from each line. Then add the header (see satune-stats/stats-paper.csv)
-At this point, `stats-cbmc.csv` should be of the same format with `satune-stats/stats-paper.csv`. We repeat this process for the other three verification tools.
+Now, some trivial changes in `stats-cbmc.csv`. First remove the `Final result:` prefixes from each line. Then add the header (see `satune-stats/stats-paper.csv`).
+At this point, `stats-jayhorn.csv` should be of the same format with `satune-stats/stats-paper.csv`. We repeat this process for the other three verification tools.
 
 
 We have two scripts under the scripts directory:
@@ -88,3 +88,5 @@ We have two scripts under the scripts directory:
 # Contact Us
 
 Please email us at ukoc@cs.umd.edu or austin.mordahl@utdallas.edu if you have any question.
+
+If you found bug(s), please report it/them using "GitHub Issues".

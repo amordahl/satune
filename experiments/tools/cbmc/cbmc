@@ -1,7 +1,7 @@
 #!/bin/bash
 
-TOOL_BINARY=./cbmc-binary
-TOOL_NAME=CBMC
+readonly TOOL_BINARY=./cbmc-binary
+readonly TOOL_NAME=CBMC
 
 # function to run the tool
 
@@ -11,13 +11,13 @@ run()
     PROPERTY="$PROPERTY --no-assertions --no-self-loops-to-assumptions"
   fi
   EC=42
-  timeout -s KILL 60 bash -c '$TOOL_BINARY --graphml-witness $LOG.witness  --verbosity 4 --stop-on-fail $BIT_WIDTH --object-bits $OBJ_BITS $PROPERTY $REST --function $ENTRY $BM >> $LOG.latest 2>&1;'
+  timeout -s KILL 60 bash -c './cbmc-binary --graphml-witness $LOG.witness  --verbosity 4 --stop-on-fail $BIT_WIDTH --object-bits $OBJ_BITS $PROPERTY $REST --function $ENTRY $BM >> $LOG.latest 2>&1;'
   ec=$? ;
   if [ $ec -eq 0 ] ; then
     if ! tail -n 10 $LOG.latest | grep -q "^VERIFICATION SUCCESSFUL$" ; then
       ec=1 ;
     else
-      timeout -s KILL 60 bash -c '$TOOL_BINARY --unwinding-assertions --stop-on-fail $BIT_WIDTH --object-bits $OBJ_BITS $PROPERTY $REST --function $ENTRY $BM > /dev/null 2>&1';
+      timeout -s KILL 60 bash -c './cbmc-binary --unwinding-assertions --stop-on-fail $BIT_WIDTH --object-bits $OBJ_BITS $PROPERTY $REST --function $ENTRY $BM > /dev/null 2>&1';
       if [ $? -ne 0 ]; then
         ec=42 ;
       fi

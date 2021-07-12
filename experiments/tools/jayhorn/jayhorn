@@ -14,7 +14,7 @@ while [ -n "$1" ] ; do
     --propertyfile) PROPERTY_FILE="$2" ; shift 2 ;;
     --graphml-witness) WITNESS_FILE="$2" ; shift 2 ;;
     --version) java -jar $JAYHORN -version ; exit 0 ;;
-    /home/anon/sv/sv-comp/benchmarks/java/*) BENCHMARKS="$BENCHMARKS $1" ; shift 1 ;;
+    /home/satune/satune/experiments/sv-comp/benchmarks/java/*) BENCHMARKS="$BENCHMARKS $1" ; shift 1 ;;
     *) REST="$*"; shift $# ;;
   esac
 done
