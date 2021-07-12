@@ -13,8 +13,9 @@ Follow the installation instructions for CBMC
 
 ## 4. Test the following command under the sv-comp directory;
 ```shell
-./jbmc --propertyfile 
-
+readonly JAVA_BENCH_DIR=../../sv-comp/benchmarks/java
+./jbmc --propertyfile $JAVA_BENCH_DIR/properties/assert.prp $JAVA_BENCH_DIR/common $JAVA_BENCH_DIR/MinePump/spec1-5_product1
+# This benchmark is unsafe. So the run should results in "VERIFICATION FAILED"
 ```
 
 Now, you can use the run_exp.pl script to run the experiments. You might need to change the paths that are defined in the script.

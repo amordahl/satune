@@ -26,7 +26,15 @@ usage: java -jar satune.jar [options]
                                     cbmc,symbiotic,jayhorn,jbmc
 ```
 
-Should be run from this directory.
+Should be run from this directory. Following commands would repeat the SATune executions in the paper with the random seed 1234:
+```shell
+java -jar satune.jar --tool jarhorn --threshold 1.0 --seed 1234 --search anneal --ml-model classification
+java -jar satune.jar --tool jbmc --threshold 1.0 --seed 1234 --search anneal --ml-model classification
+java -jar satune.jar --tool cbmc --threshold 1.0 --seed 1234 --search anneal --ml-model classification
+java -jar satune.jar --tool symbiotic --threshold 1.0 --seed 1234 --search anneal --ml-model classification
+```
+
+Note that, `--threshold 1.0` and `--ml-model classification` parameters are not discussed in the paper (and they have no effect in the algorithm).
 
 ## Subject Verification Tools
 
