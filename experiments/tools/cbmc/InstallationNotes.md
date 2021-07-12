@@ -20,7 +20,7 @@ sudo apt install boolector
 
 4. Test the following command under the sv-comp directory;
 ```shell
-./cbmc --propertyfile sv-benchmarks/c/ReachSafety.prp sv-benchmarks/c/pthread-wmm/rfi010_tso.oepc_false-unreach-call.c
+cbmc --propertyfile ../../sv-comp/benchmarks/c/ReachSafety.prp ../../sv-comp/benchmarks/c/pthread-wmm/rfi010_tso.oepc_false-unreach-call.c
 # This should print out "VERIFICATION FAILED" at the end.
 ```
 
