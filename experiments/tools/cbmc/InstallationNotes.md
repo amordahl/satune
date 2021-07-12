@@ -1,6 +1,8 @@
 1. Get CBMC 5.11 from https://www.cprover.org/cbmc
 ```shell
+cd tools/cbmc
 wget https://www.cprover.org/cbmc/download/cbmc-5-11-linux-64.tgz
+
 ```
 
 2. Place the cbmc-binary executable under cbmc directory and give it executable rights.
