@@ -20,7 +20,7 @@ tools={'CBMC':['c','data/def_completes.txt',None],
 
 completesMap={}
 for tool,fields in tools.items():
-	TOOL_DIR='{}/tools/{}'.format(BASE_DIR, tool)
+	TOOL_DIR='{}/tools/{}'.format(BASE_DIR, tool.lower())
 	with open('{}/{}'.format(TOOL_DIR, fields[1]), 'r') as f:
 		completesMap[tool] = set(f.read().splitlines())
 
