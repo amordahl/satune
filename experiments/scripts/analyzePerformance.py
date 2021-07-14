@@ -13,10 +13,10 @@ BASE_DIR=f'{HOME_DIR}/satune/experiments'
 
 
 # dictionary of subject tools. {tool: [prog_lang, default_config, exclusions_file]}
-tools={'CBMC':['c','data/def_completes.txt',None],
-		'JayHorn':['java','data/def_completes.txt',None],
-		'JBMC':['java', 'data/def_completes.txt','data/unmodelled_skips.txt'], 
-		'Symbiotic':['c','data/def_completes2.txt','data/concurrency_skips.txt']}
+tools={'cbmc':['c','data/def_completes.txt',None],
+		'jayhorn':['java','data/def_completes.txt',None],
+		'jbmc':['java', 'data/def_completes.txt','data/unmodelled_skips.txt'], 
+		'symbiotic':['c','data/def_completes2.txt','data/concurrency_skips.txt']}
 
 completesMap={}
 for tool,fields in tools.items():
