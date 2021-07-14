@@ -1,0 +1,82 @@
+--explicit-symbolic --no-slice --no-prepare --no-kernel --no-posix --undefined-retval-nosym --pta fi --repeat-slicing 2 --optimize=before-O2
+--no-slice --no-prepare --no-kernel --no-libc --no-posix --overflow-with-clang --pta fs --repeat-slicing 1 --optimize=after-O3
+--explicit-symbolic --no-posix --undefined-are-pure --undefined-retval-nosym --pta inv --repeat-slicing 10 --optimize=before-conservative:after-conservative
+--libc=klee --malloc-never-fails --no-posix --overflow-with-clang --undefined-are-pure --pta fi --repeat-slicing 2 --optimize=after-conservative
+--libc=klee --no-slice --no-kernel --no-posix --require-slicer --pta fs --repeat-slicing 5 --optimize=before-O2:after-O2
+--explicit-symbolic --libc=klee --malloc-never-fails --no-slice --overflow-with-clang --pta fi --repeat-slicing 2 --optimize=before-conservative
+--explicit-symbolic --libc=klee --malloc-never-fails --no-kernel --undefined-are-pure --pta inv --repeat-slicing 1 --optimize=after-conservative
+--explicit-symbolic --no-prepare --overflow-with-clang --undefined-retval-nosym --pta fs --repeat-slicing 10 --optimize=before-O2:after-O3
+--no-slice --no-prepare --no-libc --require-slicer --pta fi --repeat-slicing 1 --optimize=before-conservative
+--no-libc --overflow-with-clang --pta inv --repeat-slicing 5 --no-optimize
+--explicit-symbolic --libc=klee --malloc-never-fails --no-slice --no-libc --overflow-with-clang --require-slicer --undefined-retval-nosym --pta fs --repeat-slicing 1 --no-optimize
+--explicit-symbolic --no-slice --no-kernel --no-libc --overflow-with-clang --require-slicer --pta fi --repeat-slicing 10 --optimize=before-conservative:after-O3
+--explicit-symbolic --libc=klee --no-slice --no-prepare --no-kernel --no-posix --require-slicer --undefined-are-pure --undefined-retval-nosym --pta fi --repeat-slicing 5 --no-optimize
+--explicit-symbolic --libc=klee --malloc-never-fails --no-slice --no-kernel --no-libc --overflow-with-clang --pta fi --repeat-slicing 10 --optimize=before-O3
+--malloc-never-fails --no-slice --no-kernel --no-posix --require-slicer --pta fi --repeat-slicing 3 --optimize=after-O2
+--no-prepare --no-kernel --no-libc --no-posix --overflow-with-clang --pta inv --repeat-slicing 1 --optimize=before-O2
+--explicit-symbolic --malloc-never-fails --no-prepare --overflow-with-clang --undefined-retval-nosym --pta inv --repeat-slicing 5 --optimize=after-O2
+--no-prepare --no-posix --undefined-retval-nosym --pta fs --repeat-slicing 5 --optimize=before-O3
+--libc=klee --malloc-never-fails --no-slice --no-libc --no-posix --overflow-with-clang --undefined-are-pure --undefined-retval-nosym --pta fs --repeat-slicing 2 --optimize=before-conservative:after-O3
+--libc=klee --no-prepare --overflow-with-clang --undefined-are-pure --undefined-retval-nosym --pta fi --repeat-slicing 3 --optimize=before-O2:after-O2
+--explicit-symbolic --libc=klee --malloc-never-fails --no-slice --no-prepare --require-slicer --undefined-are-pure --undefined-retval-nosym --pta fi --repeat-slicing 1 --optimize=before-O3:after-O3
+--no-prepare --no-kernel --overflow-with-clang --undefined-are-pure --pta inv --repeat-slicing 1 --optimize=before-O3
+--malloc-never-fails --no-slice --no-kernel --no-libc --overflow-with-clang --require-slicer --undefined-are-pure --undefined-retval-nosym --pta inv --repeat-slicing 2 --optimize=before-O3
+--explicit-symbolic --libc=klee --malloc-never-fails --no-slice --no-prepare --no-posix --require-slicer --undefined-are-pure --pta fs --repeat-slicing 3 --optimize=before-conservative:after-O3
+--libc=klee --malloc-never-fails --no-slice --no-prepare --no-kernel --no-libc --no-posix --overflow-with-clang --require-slicer --undefined-are-pure --undefined-retval-nosym --pta fi --repeat-slicing 2 --optimize=before-O3:after-conservative
+--explicit-symbolic --malloc-never-fails --overflow-with-clang --undefined-retval-nosym --pta fs --repeat-slicing 2 --no-optimize
+--libc=klee --malloc-never-fails --no-slice --no-prepare --no-posix --require-slicer --undefined-are-pure --undefined-retval-nosym --pta fi --repeat-slicing 1 --optimize=after-O2
+--no-prepare --no-kernel --no-libc --no-posix --overflow-with-clang --undefined-are-pure --undefined-retval-nosym --pta inv --repeat-slicing 3 --optimize=before-O2:after-O3
+--explicit-symbolic --malloc-never-fails --no-slice --no-prepare --no-kernel --no-libc --require-slicer --undefined-retval-nosym --pta inv --repeat-slicing 2 --optimize=before-conservative:after-O2
+--explicit-symbolic --no-kernel --undefined-are-pure --pta fi --repeat-slicing 2 --optimize=before-O3:after-O3
+--explicit-symbolic --malloc-never-fails --no-slice --no-kernel --no-libc --no-posix --overflow-with-clang --require-slicer --pta fs --repeat-slicing 5 --optimize=after-O3
+--explicit-symbolic --libc=klee --malloc-never-fails --no-slice --no-prepare --no-libc --no-posix --pta inv --repeat-slicing 5 --optimize=before-O2
+--explicit-symbolic --malloc-never-fails --no-prepare --no-kernel --no-libc --undefined-are-pure --undefined-retval-nosym --pta fs --repeat-slicing 10 --optimize=before-O3:after-O2
+--libc=klee --pta fi --repeat-slicing 10 --optimize=after-O2
+--explicit-symbolic --malloc-never-fails --no-prepare --no-libc --pta fi --repeat-slicing 3 --optimize=before-O3
+--no-prepare --no-posix --overflow-with-clang --pta inv --repeat-slicing 5 --optimize=before-conservative
+--libc=klee --no-slice --no-kernel --overflow-with-clang --undefined-are-pure --undefined-retval-nosym --pta fs --repeat-slicing 3 --optimize=before-O3:after-O2
+--malloc-never-fails --no-slice --no-kernel --no-libc --no-posix --overflow-with-clang --require-slicer --undefined-are-pure --undefined-retval-nosym --pta fs --repeat-slicing 1 --optimize=before-conservative:after-conservative
+--libc=klee --malloc-never-fails --no-slice --overflow-with-clang --require-slicer --undefined-are-pure --pta fi --repeat-slicing 5 --optimize=before-O2:after-O3
+--malloc-never-fails --no-slice --no-prepare --no-kernel --no-libc --overflow-with-clang --require-slicer --undefined-are-pure --undefined-retval-nosym --pta inv --repeat-slicing 5 --optimize=before-O3:after-O2
+--explicit-symbolic --malloc-never-fails --no-slice --no-kernel --no-libc --no-posix --overflow-with-clang --require-slicer --undefined-are-pure --pta inv --repeat-slicing 10 --optimize=before-O2:after-O2
+--explicit-symbolic --libc=klee --no-libc --no-posix --overflow-with-clang --undefined-retval-nosym --pta inv --repeat-slicing 2 --optimize=before-conservative:after-conservative
+--libc=klee --malloc-never-fails --no-slice --no-prepare --no-libc --no-posix --require-slicer --undefined-retval-nosym --pta fi --repeat-slicing 10 --optimize=before-O2:after-conservative
+--explicit-symbolic --libc=klee --malloc-never-fails --no-kernel --no-libc --overflow-with-clang --undefined-retval-nosym --pta inv --repeat-slicing 1 --optimize=before-conservative:after-O3
+--explicit-symbolic --libc=klee --malloc-never-fails --no-prepare --no-kernel --no-posix --pta inv --repeat-slicing 5 --optimize=before-O3:after-conservative
+--explicit-symbolic --no-slice --no-kernel --require-slicer --undefined-are-pure --pta fi --repeat-slicing 5 --optimize=before-O3:after-O3
+--libc=klee --malloc-never-fails --no-slice --no-prepare --overflow-with-clang --require-slicer --undefined-are-pure --undefined-retval-nosym --pta inv --repeat-slicing 1 --optimize=before-O2:after-O3
+--malloc-never-fails --no-posix --undefined-are-pure --undefined-retval-nosym --pta fi --repeat-slicing 5 --optimize=before-conservative:after-O2
+--explicit-symbolic --libc=klee --malloc-never-fails --no-slice --no-prepare --no-kernel --no-libc --overflow-with-clang --require-slicer --undefined-are-pure --pta inv --repeat-slicing 3 --optimize=before-conservative:after-O2
+--explicit-symbolic --malloc-never-fails --no-slice --no-posix --overflow-with-clang --require-slicer --pta fs --repeat-slicing 2 --optimize=before-O3:after-O2
+--libc=klee --malloc-never-fails --no-prepare --no-posix --undefined-are-pure --undefined-retval-nosym --pta fi --repeat-slicing 2 --optimize=before-O2:after-O2
+--explicit-symbolic --malloc-never-fails --no-slice --no-kernel --no-libc --require-slicer --undefined-are-pure --pta fs --repeat-slicing 3 --optimize=before-O2
+--explicit-symbolic --malloc-never-fails --no-slice --no-posix --overflow-with-clang --require-slicer --undefined-retval-nosym --pta fs --repeat-slicing 10 --optimize=before-conservative
+--libc=klee --no-slice --no-libc --overflow-with-clang --require-slicer --pta fs --repeat-slicing 3 --optimize=before-O3:after-O3
+--no-slice --no-posix --require-slicer --undefined-retval-nosym --pta fi --repeat-slicing 5 --optimize=before-O2:after-conservative
+--explicit-symbolic --no-slice --no-prepare --no-libc --overflow-with-clang --pta fi --repeat-slicing 1 --optimize=before-O2:after-conservative
+--no-prepare --no-kernel --no-libc --undefined-retval-nosym --pta fs --repeat-slicing 2 --optimize=after-O2
+--malloc-never-fails --no-prepare --no-kernel --no-posix --pta inv --repeat-slicing 3 --optimize=before-O2:after-conservative
+--explicit-symbolic --no-slice --no-kernel --no-libc --no-posix --require-slicer --pta inv --repeat-slicing 10 --optimize=before-O3:after-conservative
+--explicit-symbolic --no-slice --no-prepare --no-posix --require-slicer --undefined-are-pure --pta inv --repeat-slicing 5 --optimize=before-conservative:after-O3
+--libc=klee --malloc-never-fails --no-prepare --no-libc --no-posix --undefined-retval-nosym --pta fi --repeat-slicing 3 --optimize=after-O3
+--libc=klee --no-slice --no-prepare --no-libc --overflow-with-clang --require-slicer --undefined-retval-nosym --pta fi --repeat-slicing 3 --optimize=before-conservative:after-conservative
+--explicit-symbolic --libc=klee --no-slice --no-posix --overflow-with-clang --require-slicer --undefined-are-pure --undefined-retval-nosym --pta inv --repeat-slicing 3 --no-optimize
+--libc=klee --no-slice --no-prepare --no-posix --require-slicer --undefined-are-pure --undefined-retval-nosym --pta inv --repeat-slicing 10 --optimize=before-O3:after-O3
+--explicit-symbolic --no-posix --undefined-retval-nosym --pta inv --repeat-slicing 3 --optimize=before-O3:after-conservative
+--no-kernel --no-libc --no-posix --undefined-are-pure --undefined-retval-nosym --pta fs --repeat-slicing 3 --optimize=before-conservative
+--explicit-symbolic --libc=klee --no-slice --no-prepare --no-kernel --no-libc --overflow-with-clang --require-slicer --undefined-are-pure --pta fs --repeat-slicing 3 --optimize=after-conservative
+--malloc-never-fails --no-kernel --no-posix --pta fi --repeat-slicing 5 --optimize=after-conservative
+--explicit-symbolic --no-slice --no-kernel --no-libc --require-slicer --undefined-are-pure --pta fs --repeat-slicing 2 --optimize=before-O2:after-conservative
+--explicit-symbolic --libc=klee --malloc-never-fails --no-libc --pta fs --repeat-slicing 1 --optimize=before-O3:after-conservative
+--explicit-symbolic --libc=klee --no-kernel --no-libc --no-posix --undefined-are-pure --undefined-retval-nosym --pta fi --repeat-slicing 5 --optimize=before-O2:after-O3
+--explicit-symbolic --libc=klee --no-kernel --no-libc --no-posix --undefined-retval-nosym --pta fi --repeat-slicing 1 --optimize=before-O3:after-O2
+--explicit-symbolic --no-slice --no-posix --pta fs --repeat-slicing 1 --optimize=before-O2:after-O2
+--explicit-symbolic --libc=klee --no-kernel --no-libc --overflow-with-clang --undefined-are-pure --pta fs --repeat-slicing 5 --optimize=before-conservative:after-conservative
+--libc=klee --no-slice --no-kernel --overflow-with-clang --require-slicer --undefined-retval-nosym --pta inv --repeat-slicing 1 --optimize=before-conservative:after-O2
+--no-prepare --no-kernel --no-libc --no-posix --overflow-with-clang --undefined-are-pure --pta inv --repeat-slicing 2 --optimize=before-O2:after-O3
+--libc=klee --no-prepare --no-libc --no-posix --undefined-are-pure --pta fs --repeat-slicing 10 --optimize=before-conservative:after-O2
+--no-slice --no-prepare --no-kernel --overflow-with-clang --require-slicer --undefined-are-pure --undefined-retval-nosym --pta fs --repeat-slicing 10 --optimize=after-conservative
+--explicit-symbolic --no-slice --no-prepare --overflow-with-clang --require-slicer --undefined-retval-nosym --pta inv --repeat-slicing 2 --optimize=after-O3
+--libc=klee --no-prepare --undefined-are-pure --pta inv --repeat-slicing 10 --no-optimize
+--explicit-symbolic --libc=klee --malloc-never-fails --no-slice --no-libc --no-posix --require-slicer --undefined-are-pure --pta fi --repeat-slicing 10 --optimize=after-O3
+--explicit-symbolic --malloc-never-fails --no-slice --no-prepare --no-posix --overflow-with-clang --undefined-are-pure --pta fi --repeat-slicing 10 --optimize=before-O2

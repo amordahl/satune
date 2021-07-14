@@ -1,0 +1,256 @@
+-specs -bounded-heap-size 1 -heap-limit 10 -heap-mode auto -initial-heap-size 5000 -inline-count 10 -inline-size 1000 -mem-prec 1 -solver spacer -step-heap-size 100
+-bounded-heap-size 1000 -heap-limit -1 -heap-mode auto -initial-heap-size 10 -inline-count 100 -inline-size 1 -mem-prec 2 -solver spacer -step-heap-size 1
+-rta -specs -bounded-heap-size 1 -heap-limit 100 -heap-mode bounded -initial-heap-size 100 -inline-count 100 -inline-size -1 -mem-prec 3 -solver spacer -step-heap-size 10
+-specs -bounded-heap-size 1 -heap-limit 1 -heap-mode unbounded -initial-heap-size 1000 -inline-count 1000 -inline-size -1 -mem-prec 3 -solver eldarica -step-heap-size 1 -solver-options abstract
+-rta -specs -bounded-heap-size 5000 -heap-limit 1 -heap-mode bounded -initial-heap-size 10 -inline-count 10 -inline-size -1 -mem-prec 2 -solver eldarica -step-heap-size 1 -solver-options abstract
+-rta -bounded-heap-size 1 -heap-limit -1 -heap-mode auto -initial-heap-size 100 -inline-count -1 -inline-size 10 -mem-prec 2 -solver eldarica -step-heap-size 100 -solver-options abstract
+-bounded-heap-size 10 -heap-limit 1 -heap-mode auto -initial-heap-size 100 -inline-count -1 -inline-size 10 -mem-prec 1 -solver eldarica -step-heap-size 5000 -solver-options debug
+-rta -bounded-heap-size 100 -heap-limit -1 -heap-mode unbounded -initial-heap-size 1000 -inline-count 1 -inline-size 1000 -mem-prec 4 -solver spacer -step-heap-size 100
+-rta -bounded-heap-size 5000 -heap-limit 1000 -heap-mode bounded -initial-heap-size 10 -inline-count 1000 -inline-size -1 -mem-prec 1 -solver spacer -step-heap-size 100
+-rta -bounded-heap-size 5000 -heap-limit 1000 -heap-mode bounded -initial-heap-size 100 -inline-count 1 -inline-size 1000 -mem-prec 5 -solver eldarica -step-heap-size 1000 -solver-options abstract
+-rta -bounded-heap-size 10 -heap-limit 100 -heap-mode auto -initial-heap-size 1 -inline-count 1 -inline-size 1000 -mem-prec 3 -solver eldarica -step-heap-size 100 -solver-options debug
+-specs -bounded-heap-size 1 -heap-limit -1 -heap-mode bounded -initial-heap-size 10 -inline-count 10 -inline-size 1 -mem-prec 2 -solver spacer -step-heap-size 1000
+-specs -bounded-heap-size 100 -heap-limit 1000 -heap-mode bounded -initial-heap-size 5000 -inline-count 1000 -inline-size 1 -mem-prec 4 -solver eldarica -step-heap-size 100 -solver-options abstractPO
+-rta -bounded-heap-size 1000 -heap-limit 1 -heap-mode bounded -initial-heap-size 10 -inline-count 1 -inline-size 1 -mem-prec 4 -solver eldarica -step-heap-size 10 -solver-options abstract
+-specs -bounded-heap-size 1000 -heap-limit 100 -heap-mode bounded -initial-heap-size 100 -inline-count 1000 -inline-size 100 -mem-prec 5 -solver eldarica -step-heap-size 5000 -solver-options abstractPO
+-specs -bounded-heap-size 1 -heap-limit -1 -heap-mode unbounded -initial-heap-size 10 -inline-count 1000 -inline-size 1000 -mem-prec 2 -solver eldarica -step-heap-size 1000 -solver-options abstractPO
+-bounded-heap-size 5000 -heap-limit -1 -heap-mode unbounded -initial-heap-size 1 -inline-count 10 -inline-size 10 -mem-prec 1 -solver eldarica -step-heap-size 100 -solver-options abstract
+-specs -bounded-heap-size 10 -heap-limit 10 -heap-mode unbounded -initial-heap-size 10 -inline-count 10 -inline-size 100 -mem-prec 4 -solver eldarica -step-heap-size 5000 -solver-options abstractPO
+-rta -bounded-heap-size 1000 -heap-limit 1000 -heap-mode unbounded -initial-heap-size 1 -inline-count 10 -inline-size 1 -mem-prec 4 -solver eldarica -step-heap-size 10 -solver-options abstractPO
+-bounded-heap-size 1000 -heap-limit 1 -heap-mode unbounded -initial-heap-size 1000 -inline-count 100 -inline-size 10 -mem-prec 5 -solver spacer -step-heap-size 1
+-rta -specs -bounded-heap-size 10 -heap-limit 1 -heap-mode bounded -initial-heap-size 1 -inline-count -1 -inline-size 100 -mem-prec 1 -solver eldarica -step-heap-size 1 -solver-options debug
+-specs -bounded-heap-size 5000 -heap-limit 1 -heap-mode unbounded -initial-heap-size 1 -inline-count 100 -inline-size 1000 -mem-prec 3 -solver eldarica -step-heap-size 1000 -solver-options debug
+-rta -specs -bounded-heap-size 100 -heap-limit 100 -heap-mode auto -initial-heap-size 10 -inline-count 10 -inline-size 100 -mem-prec 4 -solver eldarica -step-heap-size 1 -solver-options debug
+-bounded-heap-size 1000 -heap-limit -1 -heap-mode auto -initial-heap-size 1000 -inline-count 100 -inline-size 100 -mem-prec 4 -solver eldarica -step-heap-size 1 -solver-options abstract
+-rta -bounded-heap-size 1000 -heap-limit 1000 -heap-mode unbounded -initial-heap-size 100 -inline-count -1 -inline-size 1000 -mem-prec 1 -solver spacer -step-heap-size 10
+-rta -specs -bounded-heap-size 10 -heap-limit -1 -heap-mode auto -initial-heap-size 1000 -inline-count -1 -inline-size -1 -mem-prec 4 -solver eldarica -step-heap-size 5000 -solver-options debug
+-specs -bounded-heap-size 5000 -heap-limit -1 -heap-mode bounded -initial-heap-size 10 -inline-count 100 -inline-size 10 -mem-prec 5 -solver eldarica -step-heap-size 5000 -solver-options debug
+-specs -bounded-heap-size 100 -heap-limit 1 -heap-mode unbounded -initial-heap-size 1000 -inline-count 1000 -inline-size 1000 -mem-prec 2 -solver eldarica -step-heap-size 5000
+-specs -bounded-heap-size 5000 -heap-limit 100 -heap-mode auto -initial-heap-size 1 -inline-count 10 -inline-size -1 -mem-prec 5 -solver eldarica -step-heap-size 1000 -solver-options abstractPO
+-rta -bounded-heap-size 100 -heap-limit 1000 -heap-mode auto -initial-heap-size 1 -inline-count 10 -inline-size 1000 -mem-prec 2 -solver eldarica -step-heap-size 1 -solver-options abstract
+-specs -bounded-heap-size 5000 -heap-limit 10 -heap-mode auto -initial-heap-size 100 -inline-count -1 -inline-size 1 -mem-prec 4 -solver eldarica -step-heap-size 1000 -solver-options debug
+-bounded-heap-size 10 -heap-limit -1 -heap-mode unbounded -initial-heap-size 5000 -inline-count 10 -inline-size 100 -mem-prec 5 -solver eldarica -step-heap-size 1000 -solver-options abstractPO
+-rta -specs -bounded-heap-size 5000 -heap-limit 100 -heap-mode unbounded -initial-heap-size 10 -inline-count -1 -inline-size 1000 -mem-prec 2 -solver eldarica -step-heap-size 1 -solver-options abstract
+-rta -specs -bounded-heap-size 100 -heap-limit 100 -heap-mode auto -initial-heap-size 1000 -inline-count 100 -inline-size 100 -mem-prec 1 -solver eldarica -step-heap-size 1 -solver-options abstractPO
+-bounded-heap-size 5000 -heap-limit 10 -heap-mode auto -initial-heap-size 10 -inline-count 1000 -inline-size 1000 -mem-prec 3 -solver eldarica -step-heap-size 5000 -solver-options debug
+-bounded-heap-size 10 -heap-limit -1 -heap-mode auto -initial-heap-size 1 -inline-count 1000 -inline-size 100 -mem-prec 2 -solver eldarica -step-heap-size 100 -solver-options abstract
+-rta -specs -bounded-heap-size 100 -heap-limit 1000 -heap-mode bounded -initial-heap-size 10 -inline-count 1 -inline-size 100 -mem-prec 2 -solver eldarica -step-heap-size 10 -solver-options debug
+-specs -bounded-heap-size 5000 -heap-limit -1 -heap-mode unbounded -initial-heap-size 5000 -inline-count 1000 -inline-size 10 -mem-prec 4 -solver eldarica -step-heap-size 5000 -solver-options debug
+-specs -bounded-heap-size 1 -heap-limit 100 -heap-mode unbounded -initial-heap-size 1000 -inline-count 1 -inline-size 100 -mem-prec 1 -solver spacer -step-heap-size 5000
+-bounded-heap-size 1 -heap-limit 1 -heap-mode auto -initial-heap-size 100 -inline-count 10 -inline-size 1000 -mem-prec 5 -solver eldarica -step-heap-size 5000 -solver-options abstract
+-specs -bounded-heap-size 5000 -heap-limit 10 -heap-mode unbounded -initial-heap-size 1 -inline-count 10 -inline-size 10 -mem-prec 2 -solver spacer -step-heap-size 5000
+-rta -specs -bounded-heap-size 1 -heap-limit -1 -heap-mode auto -initial-heap-size 1000 -inline-count 10 -inline-size -1 -mem-prec 3 -solver eldarica -step-heap-size 100 -solver-options abstractPO
+-rta -bounded-heap-size 1000 -heap-limit 100 -heap-mode bounded -initial-heap-size 1 -inline-count 10 -inline-size 1000 -mem-prec 1 -solver eldarica -step-heap-size 1000 -solver-options debug
+-bounded-heap-size 1000 -heap-limit 10 -heap-mode bounded -initial-heap-size 1000 -inline-count 100 -inline-size 100 -mem-prec 2 -solver eldarica -step-heap-size 1000 -solver-options abstractPO
+-bounded-heap-size 1000 -heap-limit 1000 -heap-mode auto -initial-heap-size 10 -inline-count 10 -inline-size 1000 -mem-prec 5 -solver eldarica -step-heap-size 5000 -solver-options abstract
+-bounded-heap-size 1000 -heap-limit 1 -heap-mode bounded -initial-heap-size 1000 -inline-count -1 -inline-size -1 -mem-prec 2 -solver spacer -step-heap-size 1000
+-rta -specs -bounded-heap-size 1000 -heap-limit -1 -heap-mode bounded -initial-heap-size 1000 -inline-count 10 -inline-size 100 -mem-prec 1 -solver eldarica -step-heap-size 1 -solver-options abstractPO
+-rta -specs -bounded-heap-size 1 -heap-limit 100 -heap-mode unbounded -initial-heap-size 1 -inline-count 1 -inline-size 100 -mem-prec 1 -solver spacer -step-heap-size 1000
+-rta -specs -bounded-heap-size 5000 -heap-limit 1000 -heap-mode unbounded -initial-heap-size 100 -inline-count 1 -inline-size 100 -mem-prec 3 -solver spacer -step-heap-size 1
+-rta -specs -bounded-heap-size 1000 -heap-limit -1 -heap-mode unbounded -initial-heap-size 1 -inline-count 1000 -inline-size 100 -mem-prec 3 -solver eldarica -step-heap-size 1 -solver-options abstractPO
+-rta -specs -bounded-heap-size 1 -heap-limit 100 -heap-mode unbounded -initial-heap-size 1000 -inline-count 10 -inline-size 10 -mem-prec 3 -solver eldarica -step-heap-size 100 -solver-options debug
+-rta -bounded-heap-size 1000 -heap-limit 1 -heap-mode unbounded -initial-heap-size 1000 -inline-count 1 -inline-size -1 -mem-prec 1 -solver eldarica -step-heap-size 5000 -solver-options abstract
+-specs -bounded-heap-size 1000 -heap-limit 1 -heap-mode unbounded -initial-heap-size 100 -inline-count 100 -inline-size -1 -mem-prec 1 -solver eldarica -step-heap-size 100 -solver-options debug
+-rta -bounded-heap-size 5000 -heap-limit 10 -heap-mode auto -initial-heap-size 10 -inline-count 100 -inline-size 1000 -mem-prec 5 -solver eldarica -step-heap-size 10 -solver-options abstractPO
+-rta -bounded-heap-size 1 -heap-limit 1000 -heap-mode unbounded -initial-heap-size 1 -inline-count 1000 -inline-size 100 -mem-prec 5 -solver eldarica -step-heap-size 5000
+-rta -specs -bounded-heap-size 100 -heap-limit 1 -heap-mode bounded -initial-heap-size 5000 -inline-count -1 -inline-size 10 -mem-prec 3 -solver spacer -step-heap-size 1
+-rta -specs -bounded-heap-size 5000 -heap-limit 100 -heap-mode auto -initial-heap-size 100 -inline-count -1 -inline-size 1000 -mem-prec 4 -solver eldarica -step-heap-size 1000
+-bounded-heap-size 1000 -heap-limit 1 -heap-mode auto -initial-heap-size 5000 -inline-count -1 -inline-size 1000 -mem-prec 4 -solver eldarica -step-heap-size 10 -solver-options debug
+-bounded-heap-size 10 -heap-limit 1 -heap-mode bounded -initial-heap-size 5000 -inline-count 100 -inline-size -1 -mem-prec 2 -solver spacer -step-heap-size 100
+-specs -bounded-heap-size 10 -heap-limit 100 -heap-mode bounded -initial-heap-size 10 -inline-count -1 -inline-size -1 -mem-prec 3 -solver eldarica -step-heap-size 5000
+-rta -specs -bounded-heap-size 1000 -heap-limit 1000 -heap-mode bounded -initial-heap-size 10 -inline-count 100 -inline-size 100 -mem-prec 3 -solver eldarica -step-heap-size 100 -solver-options abstractPO
+-bounded-heap-size 5000 -heap-limit -1 -heap-mode bounded -initial-heap-size 1 -inline-count -1 -inline-size 1000 -mem-prec 5 -solver eldarica -step-heap-size 1 -solver-options abstractPO
+-bounded-heap-size 100 -heap-limit -1 -heap-mode unbounded -initial-heap-size 1000 -inline-count 1000 -inline-size 10 -mem-prec 1 -solver eldarica -step-heap-size 1 -solver-options abstract
+-rta -bounded-heap-size 100 -heap-limit 100 -heap-mode bounded -initial-heap-size 1 -inline-count 100 -inline-size 1000 -mem-prec 3 -solver spacer -step-heap-size 10
+-rta -specs -bounded-heap-size 5000 -heap-limit 1000 -heap-mode bounded -initial-heap-size 1000 -inline-count 100 -inline-size -1 -mem-prec 2 -solver eldarica -step-heap-size 5000 -solver-options abstractPO
+-specs -bounded-heap-size 1 -heap-limit 100 -heap-mode bounded -initial-heap-size 5000 -inline-count 1 -inline-size 1 -mem-prec 4 -solver eldarica -step-heap-size 10 -solver-options abstract
+-rta -bounded-heap-size 1000 -heap-limit 1000 -heap-mode bounded -initial-heap-size 5000 -inline-count 1000 -inline-size 1000 -mem-prec 2 -solver spacer -step-heap-size 1000
+-rta -specs -bounded-heap-size 5000 -heap-limit 1000 -heap-mode bounded -initial-heap-size 1 -inline-count 1 -inline-size -1 -mem-prec 4 -solver eldarica -step-heap-size 1
+-specs -bounded-heap-size 1 -heap-limit 1000 -heap-mode bounded -initial-heap-size 10 -inline-count -1 -inline-size 1000 -mem-prec 4 -solver eldarica -step-heap-size 100 -solver-options debug
+-rta -bounded-heap-size 1 -heap-limit 1000 -heap-mode auto -initial-heap-size 10 -inline-count 100 -inline-size 100 -mem-prec 2 -solver eldarica -step-heap-size 1000 -solver-options debug
+-bounded-heap-size 1 -heap-limit 1000 -heap-mode bounded -initial-heap-size 1000 -inline-count -1 -inline-size 10 -mem-prec 5 -solver eldarica -step-heap-size 10 -solver-options abstractPO
+-bounded-heap-size 1 -heap-limit 1000 -heap-mode auto -initial-heap-size 5000 -inline-count 1 -inline-size 10 -mem-prec 1 -solver eldarica -step-heap-size 100 -solver-options debug
+-specs -bounded-heap-size 100 -heap-limit 1000 -heap-mode auto -initial-heap-size 100 -inline-count 1 -inline-size 10 -mem-prec 4 -solver eldarica -step-heap-size 1000 -solver-options abstractPO
+-specs -bounded-heap-size 1 -heap-limit 10 -heap-mode bounded -initial-heap-size 100 -inline-count 1 -inline-size -1 -mem-prec 4 -solver eldarica -step-heap-size 5000 -solver-options abstract
+-specs -bounded-heap-size 5000 -heap-limit 1000 -heap-mode bounded -initial-heap-size 1000 -inline-count 10 -inline-size 100 -mem-prec 4 -solver eldarica -step-heap-size 100 -solver-options abstract
+-bounded-heap-size 100 -heap-limit 10 -heap-mode bounded -initial-heap-size 1000 -inline-count 1000 -inline-size 100 -mem-prec 1 -solver eldarica -step-heap-size 100
+-rta -specs -bounded-heap-size 10 -heap-limit 1000 -heap-mode bounded -initial-heap-size 100 -inline-count 1000 -inline-size 1 -mem-prec 3 -solver eldarica -step-heap-size 1000 -solver-options debug
+-bounded-heap-size 5000 -heap-limit 100 -heap-mode bounded -initial-heap-size 5000 -inline-count 1 -inline-size 1 -mem-prec 5 -solver spacer -step-heap-size 1
+-specs -bounded-heap-size 1 -heap-limit 10 -heap-mode unbounded -initial-heap-size 1 -inline-count -1 -inline-size 1 -mem-prec 3 -solver eldarica -step-heap-size 5000 -solver-options debug
+-specs -bounded-heap-size 100 -heap-limit 1000 -heap-mode unbounded -initial-heap-size 100 -inline-count 100 -inline-size 10 -mem-prec 2 -solver eldarica -step-heap-size 5000 -solver-options abstract
+-bounded-heap-size 5000 -heap-limit 1 -heap-mode auto -initial-heap-size 5000 -inline-count -1 -inline-size 100 -mem-prec 1 -solver eldarica -step-heap-size 10 -solver-options abstract
+-specs -bounded-heap-size 100 -heap-limit -1 -heap-mode unbounded -initial-heap-size 1 -inline-count -1 -inline-size 100 -mem-prec 4 -solver eldarica -step-heap-size 1000 -solver-options abstract
+-rta -bounded-heap-size 1 -heap-limit 10 -heap-mode auto -initial-heap-size 100 -inline-count -1 -inline-size 100 -mem-prec 3 -solver spacer -step-heap-size 1000
+-specs -bounded-heap-size 100 -heap-limit 100 -heap-mode unbounded -initial-heap-size 5000 -inline-count 1 -inline-size 10 -mem-prec 5 -solver eldarica -step-heap-size 1000 -solver-options debug
+-specs -bounded-heap-size 10 -heap-limit 1 -heap-mode bounded -initial-heap-size 10 -inline-count 1000 -inline-size 1000 -mem-prec 5 -solver eldarica -step-heap-size 1 -solver-options abstractPO
+-bounded-heap-size 1 -heap-limit 100 -heap-mode bounded -initial-heap-size 1 -inline-count 10 -inline-size 10 -mem-prec 4 -solver eldarica -step-heap-size 1 -solver-options abstractPO
+-bounded-heap-size 5000 -heap-limit 100 -heap-mode unbounded -initial-heap-size 5000 -inline-count 100 -inline-size -1 -mem-prec 3 -solver eldarica -step-heap-size 100 -solver-options abstractPO
+-rta -bounded-heap-size 100 -heap-limit 100 -heap-mode unbounded -initial-heap-size 5000 -inline-count 10 -inline-size 1 -mem-prec 2 -solver eldarica -step-heap-size 5000 -solver-options debug
+-rta -bounded-heap-size 1 -heap-limit 1 -heap-mode bounded -initial-heap-size 1 -inline-count -1 -inline-size -1 -mem-prec 2 -solver eldarica -step-heap-size 10 -solver-options debug
+-rta -bounded-heap-size 100 -heap-limit -1 -heap-mode auto -initial-heap-size 100 -inline-count -1 -inline-size 1 -mem-prec 5 -solver eldarica -step-heap-size 1 -solver-options abstractPO
+-bounded-heap-size 1 -heap-limit 1 -heap-mode unbounded -initial-heap-size 10 -inline-count -1 -inline-size -1 -mem-prec 5 -solver eldarica -step-heap-size 1 -solver-options abstract
+-rta -specs -bounded-heap-size 10 -heap-limit -1 -heap-mode bounded -initial-heap-size 5000 -inline-count 1 -inline-size 1 -mem-prec 4 -solver eldarica -step-heap-size 10 -solver-options abstractPO
+-bounded-heap-size 100 -heap-limit 1 -heap-mode auto -initial-heap-size 10 -inline-count 10 -inline-size 1 -mem-prec 3 -solver eldarica -step-heap-size 1000 -solver-options abstractPO
+-bounded-heap-size 100 -heap-limit -1 -heap-mode unbounded -initial-heap-size 10 -inline-count 100 -inline-size -1 -mem-prec 3 -solver eldarica -step-heap-size 5000 -solver-options abstract
+-rta -bounded-heap-size 100 -heap-limit 1 -heap-mode unbounded -initial-heap-size 100 -inline-count 1000 -inline-size -1 -mem-prec 2 -solver eldarica -step-heap-size 1 -solver-options abstractPO
+-rta -specs -bounded-heap-size 100 -heap-limit 1000 -heap-mode unbounded -initial-heap-size 5000 -inline-count 10 -inline-size -1 -mem-prec 3 -solver eldarica -step-heap-size 1000 -solver-options debug
+-bounded-heap-size 100 -heap-limit 100 -heap-mode unbounded -initial-heap-size 100 -inline-count 10 -inline-size 100 -mem-prec 5 -solver spacer -step-heap-size 100
+-rta -bounded-heap-size 10 -heap-limit 100 -heap-mode unbounded -initial-heap-size 10 -inline-count -1 -inline-size 100 -mem-prec 2 -solver spacer -step-heap-size 5000
+-specs -bounded-heap-size 100 -heap-limit 100 -heap-mode bounded -initial-heap-size 100 -inline-count 100 -inline-size -1 -mem-prec 5 -solver eldarica -step-heap-size 1 -solver-options debug
+-specs -bounded-heap-size 1 -heap-limit 10 -heap-mode bounded -initial-heap-size 100 -inline-count 1000 -inline-size 1 -mem-prec 1 -solver eldarica -step-heap-size 1 -solver-options debug
+-rta -bounded-heap-size 1000 -heap-limit 10 -heap-mode unbounded -initial-heap-size 10 -inline-count 1 -inline-size -1 -mem-prec 3 -solver eldarica -step-heap-size 1000 -solver-options abstract
+-rta -specs -bounded-heap-size 10 -heap-limit 1000 -heap-mode auto -initial-heap-size 1000 -inline-count -1 -inline-size 100 -mem-prec 1 -solver spacer -step-heap-size 100
+-specs -bounded-heap-size 100 -heap-limit 10 -heap-mode auto -initial-heap-size 10 -inline-count -1 -inline-size -1 -mem-prec 2 -solver spacer -step-heap-size 100
+-specs -bounded-heap-size 10 -heap-limit -1 -heap-mode unbounded -initial-heap-size 10 -inline-count -1 -inline-size 10 -mem-prec 4 -solver spacer -step-heap-size 1
+-bounded-heap-size 1 -heap-limit 1000 -heap-mode bounded -initial-heap-size 5000 -inline-count 100 -inline-size 1 -mem-prec 4 -solver spacer -step-heap-size 5000
+-rta -specs -bounded-heap-size 1 -heap-limit 1000 -heap-mode unbounded -initial-heap-size 5000 -inline-count 100 -inline-size 100 -mem-prec 1 -solver eldarica -step-heap-size 1 -solver-options abstract
+-rta -specs -bounded-heap-size 5000 -heap-limit 10 -heap-mode unbounded -initial-heap-size 5000 -inline-count 10 -inline-size 1000 -mem-prec 3 -solver eldarica -step-heap-size 1000 -solver-options abstract
+-rta -bounded-heap-size 5000 -heap-limit -1 -heap-mode unbounded -initial-heap-size 1000 -inline-count 1000 -inline-size 1 -mem-prec 1 -solver eldarica -step-heap-size 1000 -solver-options debug
+-specs -bounded-heap-size 100 -heap-limit 1 -heap-mode auto -initial-heap-size 100 -inline-count 10 -inline-size 10 -mem-prec 4 -solver eldarica -step-heap-size 10 -solver-options abstract
+-specs -bounded-heap-size 10 -heap-limit 1000 -heap-mode auto -initial-heap-size 1 -inline-count 10 -inline-size 1 -mem-prec 3 -solver spacer -step-heap-size 1
+-rta -bounded-heap-size 1 -heap-limit 10 -heap-mode bounded -initial-heap-size 5000 -inline-count 1 -inline-size 10 -mem-prec 3 -solver eldarica -step-heap-size 5000 -solver-options abstractPO
+-bounded-heap-size 5000 -heap-limit 1000 -heap-mode unbounded -initial-heap-size 10 -inline-count 100 -inline-size 1 -mem-prec 4 -solver eldarica -step-heap-size 100 -solver-options debug
+-specs -bounded-heap-size 10 -heap-limit -1 -heap-mode unbounded -initial-heap-size 1 -inline-count 1 -inline-size -1 -mem-prec 2 -solver eldarica -step-heap-size 1 -solver-options abstractPO
+-rta -bounded-heap-size 100 -heap-limit 10 -heap-mode auto -initial-heap-size 1 -inline-count -1 -inline-size 10 -mem-prec 1 -solver eldarica -step-heap-size 1000 -solver-options abstractPO
+-bounded-heap-size 1 -heap-limit 1 -heap-mode unbounded -initial-heap-size 1 -inline-count 1 -inline-size 1000 -mem-prec 5 -solver eldarica -step-heap-size 10 -solver-options abstractPO
+-rta -specs -bounded-heap-size 10 -heap-limit 100 -heap-mode bounded -initial-heap-size 10 -inline-count 100 -inline-size -1 -mem-prec 1 -solver eldarica -step-heap-size 1000 -solver-options debug
+-rta -bounded-heap-size 100 -heap-limit 100 -heap-mode auto -initial-heap-size 1000 -inline-count 1000 -inline-size -1 -mem-prec 5 -solver spacer -step-heap-size 10
+-rta -specs -bounded-heap-size 10 -heap-limit -1 -heap-mode bounded -initial-heap-size 5000 -inline-count -1 -inline-size 1 -mem-prec 3 -solver eldarica -step-heap-size 10 -solver-options debug
+-bounded-heap-size 1000 -heap-limit 10 -heap-mode auto -initial-heap-size 1000 -inline-count 1 -inline-size 10 -mem-prec 4 -solver spacer -step-heap-size 1000
+-rta -specs -bounded-heap-size 5000 -heap-limit 100 -heap-mode unbounded -initial-heap-size 100 -inline-count 10 -inline-size 1 -mem-prec 4 -solver eldarica -step-heap-size 5000 -solver-options abstractPO
+-specs -bounded-heap-size 1 -heap-limit 10 -heap-mode unbounded -initial-heap-size 5000 -inline-count 1000 -inline-size -1 -mem-prec 5 -solver eldarica -step-heap-size 100 -solver-options debug
+-rta -bounded-heap-size 10 -heap-limit 1000 -heap-mode auto -initial-heap-size 10 -inline-count 10 -inline-size 10 -mem-prec 2 -solver eldarica -step-heap-size 100 -solver-options abstractPO
+-rta -specs -bounded-heap-size 1 -heap-limit 1 -heap-mode bounded -initial-heap-size 5000 -inline-count -1 -inline-size 100 -mem-prec 1 -solver eldarica -step-heap-size 100 -solver-options abstractPO
+-rta -bounded-heap-size 10 -heap-limit -1 -heap-mode unbounded -initial-heap-size 100 -inline-count 100 -inline-size 1000 -mem-prec 2 -solver eldarica -step-heap-size 100 -solver-options debug
+-specs -bounded-heap-size 1000 -heap-limit 1000 -heap-mode auto -initial-heap-size 1000 -inline-count 100 -inline-size 10 -mem-prec 3 -solver eldarica -step-heap-size 10 -solver-options debug
+-rta -bounded-heap-size 1000 -heap-limit 100 -heap-mode unbounded -initial-heap-size 10 -inline-count 100 -inline-size 1000 -mem-prec 4 -solver eldarica -step-heap-size 5000 -solver-options debug
+-bounded-heap-size 5000 -heap-limit -1 -heap-mode unbounded -initial-heap-size 100 -inline-count 10 -inline-size 100 -mem-prec 2 -solver eldarica -step-heap-size 10 -solver-options debug
+-rta -bounded-heap-size 1 -heap-limit 10 -heap-mode auto -initial-heap-size 5000 -inline-count -1 -inline-size 100 -mem-prec 4 -solver spacer -step-heap-size 10
+-bounded-heap-size 1000 -heap-limit -1 -heap-mode bounded -initial-heap-size 100 -inline-count -1 -inline-size 1000 -mem-prec 3 -solver eldarica -step-heap-size 5000 -solver-options abstractPO
+-rta -bounded-heap-size 5000 -heap-limit 1 -heap-mode bounded -initial-heap-size 1000 -inline-count 1 -inline-size 100 -mem-prec 2 -solver eldarica -step-heap-size 10 -solver-options abstractPO
+-rta -specs -bounded-heap-size 1 -heap-limit 100 -heap-mode unbounded -initial-heap-size 10 -inline-count 1000 -inline-size 1000 -mem-prec 2 -solver eldarica -step-heap-size 10 -solver-options abstractPO
+-rta -specs -bounded-heap-size 10 -heap-limit -1 -heap-mode bounded -initial-heap-size 10 -inline-count 1 -inline-size 100 -mem-prec 1 -solver spacer -step-heap-size 1
+-specs -bounded-heap-size 1000 -heap-limit 1 -heap-mode auto -initial-heap-size 100 -inline-count 10 -inline-size 10 -mem-prec 3 -solver eldarica -step-heap-size 5000 -solver-options abstractPO
+-specs -bounded-heap-size 1 -heap-limit 10 -heap-mode auto -initial-heap-size 1 -inline-count 100 -inline-size 100 -mem-prec 2 -solver eldarica -step-heap-size 1 -solver-options abstractPO
+-bounded-heap-size 1000 -heap-limit -1 -heap-mode bounded -initial-heap-size 100 -inline-count 1000 -inline-size 10 -mem-prec 5 -solver eldarica -step-heap-size 100 -solver-options abstract
+-rta -bounded-heap-size 10 -heap-limit 1 -heap-mode auto -initial-heap-size 10 -inline-count 100 -inline-size 100 -mem-prec 3 -solver spacer -step-heap-size 5000
+-rta -bounded-heap-size 100 -heap-limit 10 -heap-mode bounded -initial-heap-size 5000 -inline-count -1 -inline-size -1 -mem-prec 5 -solver eldarica -step-heap-size 5000 -solver-options abstract
+-rta -bounded-heap-size 100 -heap-limit 1 -heap-mode bounded -initial-heap-size 1 -inline-count 1000 -inline-size 100 -mem-prec 4 -solver eldarica -step-heap-size 5000 -solver-options abstractPO
+-bounded-heap-size 1000 -heap-limit 1 -heap-mode unbounded -initial-heap-size 100 -inline-count 1000 -inline-size 1000 -mem-prec 1 -solver spacer -step-heap-size 5000
+-rta -bounded-heap-size 5000 -heap-limit 10 -heap-mode auto -initial-heap-size 100 -inline-count 1 -inline-size 100 -mem-prec 1 -solver eldarica -step-heap-size 100 -solver-options abstractPO
+-specs -bounded-heap-size 1 -heap-limit 10 -heap-mode bounded -initial-heap-size 1000 -inline-count 1000 -inline-size -1 -mem-prec 4 -solver eldarica -step-heap-size 5000 -solver-options abstractPO
+-rta -specs -bounded-heap-size 5000 -heap-limit 10 -heap-mode unbounded -initial-heap-size 5000 -inline-count -1 -inline-size 100 -mem-prec 2 -solver eldarica -step-heap-size 100 -solver-options abstractPO
+-rta -specs -bounded-heap-size 10 -heap-limit 100 -heap-mode unbounded -initial-heap-size 1000 -inline-count 10 -inline-size -1 -mem-prec 4 -solver eldarica -step-heap-size 100 -solver-options abstract
+-bounded-heap-size 10 -heap-limit 10 -heap-mode bounded -initial-heap-size 1 -inline-count 100 -inline-size 10 -mem-prec 4 -solver eldarica -step-heap-size 100 -solver-options abstractPO
+-bounded-heap-size 10 -heap-limit -1 -heap-mode auto -initial-heap-size 100 -inline-count 100 -inline-size 1 -mem-prec 5 -solver spacer -step-heap-size 1000
+-bounded-heap-size 5000 -heap-limit 1 -heap-mode unbounded -initial-heap-size 5000 -inline-count 1 -inline-size 100 -mem-prec 4 -solver eldarica -step-heap-size 5000 -solver-options debug
+-bounded-heap-size 1000 -heap-limit 10 -heap-mode auto -initial-heap-size 10 -inline-count 1000 -inline-size 1 -mem-prec 1 -solver eldarica -step-heap-size 5000 -solver-options abstractPO
+-rta -specs -bounded-heap-size 100 -heap-limit 10 -heap-mode unbounded -initial-heap-size 1000 -inline-count 1 -inline-size 1 -mem-prec 3 -solver eldarica -step-heap-size 1 -solver-options abstract
+-specs -bounded-heap-size 10 -heap-limit 1000 -heap-mode auto -initial-heap-size 1000 -inline-count 1000 -inline-size -1 -mem-prec 4 -solver eldarica -step-heap-size 1000 -solver-options abstract
+-rta -bounded-heap-size 1 -heap-limit 1 -heap-mode auto -initial-heap-size 5000 -inline-count 100 -inline-size 10 -mem-prec 2 -solver eldarica -step-heap-size 1000 -solver-options abstract
+-rta -specs -bounded-heap-size 1 -heap-limit 1 -heap-mode unbounded -initial-heap-size 10 -inline-count -1 -inline-size 1 -mem-prec 1 -solver eldarica -step-heap-size 5000 -solver-options debug
+-rta -bounded-heap-size 1000 -heap-limit -1 -heap-mode unbounded -initial-heap-size 1 -inline-count 100 -inline-size 1 -mem-prec 3 -solver eldarica -step-heap-size 5000 -solver-options abstractPO
+-bounded-heap-size 5000 -heap-limit 1000 -heap-mode unbounded -initial-heap-size 1 -inline-count 100 -inline-size 10 -mem-prec 4 -solver spacer -step-heap-size 1000
+-rta -bounded-heap-size 1000 -heap-limit -1 -heap-mode auto -initial-heap-size 5000 -inline-count 10 -inline-size -1 -mem-prec 2 -solver spacer -step-heap-size 5000
+-bounded-heap-size 100 -heap-limit 1 -heap-mode bounded -initial-heap-size 5000 -inline-count 1 -inline-size 1 -mem-prec 1 -solver spacer -step-heap-size 10
+-rta -bounded-heap-size 1 -heap-limit 100 -heap-mode auto -initial-heap-size 1 -inline-count -1 -inline-size 10 -mem-prec 5 -solver eldarica -step-heap-size 100 -solver-options abstract
+-specs -bounded-heap-size 10 -heap-limit 100 -heap-mode auto -initial-heap-size 1 -inline-count 1 -inline-size 10 -mem-prec 2 -solver eldarica -step-heap-size 1 -solver-options abstractPO
+-specs -bounded-heap-size 100 -heap-limit 1000 -heap-mode auto -initial-heap-size 1000 -inline-count -1 -inline-size -1 -mem-prec 1 -solver spacer -step-heap-size 10
+-rta -specs -bounded-heap-size 5000 -heap-limit 100 -heap-mode unbounded -initial-heap-size 1 -inline-count 1 -inline-size 1000 -mem-prec 1 -solver spacer -step-heap-size 5000
+-specs -bounded-heap-size 100 -heap-limit 10 -heap-mode auto -initial-heap-size 1 -inline-count 100 -inline-size -1 -mem-prec 1 -solver eldarica -step-heap-size 5000 -solver-options debug
+-specs -bounded-heap-size 5000 -heap-limit 1000 -heap-mode auto -initial-heap-size 5000 -inline-count 1000 -inline-size 1 -mem-prec 2 -solver eldarica -step-heap-size 10 -solver-options abstract
+-specs -bounded-heap-size 1000 -heap-limit -1 -heap-mode unbounded -initial-heap-size 1 -inline-count 1 -inline-size -1 -mem-prec 5 -solver eldarica -step-heap-size 10 -solver-options debug
+-bounded-heap-size 10 -heap-limit 100 -heap-mode bounded -initial-heap-size 10 -inline-count 1 -inline-size 100 -mem-prec 5 -solver eldarica -step-heap-size 100 -solver-options abstract
+-bounded-heap-size 1 -heap-limit -1 -heap-mode unbounded -initial-heap-size 5000 -inline-count 10 -inline-size 1000 -mem-prec 4 -solver spacer -step-heap-size 1
+-bounded-heap-size 100 -heap-limit 100 -heap-mode auto -initial-heap-size 1 -inline-count 1 -inline-size -1 -mem-prec 5 -solver spacer -step-heap-size 100
+-rta -specs -bounded-heap-size 1000 -heap-limit 100 -heap-mode unbounded -initial-heap-size 100 -inline-count 1 -inline-size -1 -mem-prec 2 -solver spacer -step-heap-size 1000
+-bounded-heap-size 1000 -heap-limit 10 -heap-mode bounded -initial-heap-size 1000 -inline-count 10 -inline-size 1000 -mem-prec 2 -solver eldarica -step-heap-size 5000 -solver-options abstract
+-rta -specs -bounded-heap-size 5000 -heap-limit 1 -heap-mode auto -initial-heap-size 1 -inline-count 1 -inline-size 10 -mem-prec 3 -solver eldarica -step-heap-size 10 -solver-options abstract
+-rta -bounded-heap-size 10 -heap-limit 1000 -heap-mode bounded -initial-heap-size 1 -inline-count 100 -inline-size 1 -mem-prec 5 -solver spacer -step-heap-size 100
+-rta -specs -bounded-heap-size 10 -heap-limit 100 -heap-mode bounded -initial-heap-size 100 -inline-count 100 -inline-size 1000 -mem-prec 2 -solver eldarica -step-heap-size 1 -solver-options abstract
+-rta -bounded-heap-size 1 -heap-limit 1000 -heap-mode bounded -initial-heap-size 1000 -inline-count 100 -inline-size 1000 -mem-prec 3 -solver eldarica -step-heap-size 1000 -solver-options abstractPO
+-bounded-heap-size 100 -heap-limit 1 -heap-mode bounded -initial-heap-size 10 -inline-count 1000 -inline-size 1 -mem-prec 5 -solver eldarica -step-heap-size 1000 -solver-options abstract
+-rta -specs -bounded-heap-size 5000 -heap-limit 100 -heap-mode bounded -initial-heap-size 1000 -inline-count 10 -inline-size 1000 -mem-prec 3 -solver eldarica -step-heap-size 10 -solver-options abstractPO
+-bounded-heap-size 1000 -heap-limit 100 -heap-mode bounded -initial-heap-size 5000 -inline-count 1 -inline-size -1 -mem-prec 4 -solver eldarica -step-heap-size 1 -solver-options abstractPO
+-specs -bounded-heap-size 100 -heap-limit -1 -heap-mode auto -initial-heap-size 5000 -inline-count 100 -inline-size 10 -mem-prec 3 -solver eldarica -step-heap-size 1 -solver-options debug
+-rta -specs -bounded-heap-size 10 -heap-limit 10 -heap-mode unbounded -initial-heap-size 1000 -inline-count 10 -inline-size 10 -mem-prec 5 -solver eldarica -step-heap-size 1000 -solver-options debug
+-bounded-heap-size 5000 -heap-limit 10 -heap-mode unbounded -initial-heap-size 1000 -inline-count 100 -inline-size 100 -mem-prec 5 -solver eldarica -step-heap-size 100 -solver-options abstract
+-rta -bounded-heap-size 5000 -heap-limit 10 -heap-mode auto -initial-heap-size 100 -inline-count 100 -inline-size 10 -mem-prec 2 -solver spacer -step-heap-size 1
+-specs -bounded-heap-size 1000 -heap-limit 100 -heap-mode unbounded -initial-heap-size 1000 -inline-count -1 -inline-size 10 -mem-prec 1 -solver eldarica -step-heap-size 5000 -solver-options abstractPO
+-bounded-heap-size 10 -heap-limit 100 -heap-mode auto -initial-heap-size 5000 -inline-count 1000 -inline-size 1000 -mem-prec 1 -solver eldarica -step-heap-size 1 -solver-options abstractPO
+-bounded-heap-size 10 -heap-limit 1000 -heap-mode unbounded -initial-heap-size 1000 -inline-count 1 -inline-size 1 -mem-prec 5 -solver eldarica -step-heap-size 5000 -solver-options debug
+-rta -specs -bounded-heap-size 100 -heap-limit -1 -heap-mode bounded -initial-heap-size 10 -inline-count -1 -inline-size -1 -mem-prec 4 -solver eldarica -step-heap-size 10 -solver-options abstractPO
+-rta -bounded-heap-size 1000 -heap-limit 10 -heap-mode unbounded -initial-heap-size 5000 -inline-count 100 -inline-size 10 -mem-prec 3 -solver eldarica -step-heap-size 10
+-rta -bounded-heap-size 1000 -heap-limit 10 -heap-mode bounded -initial-heap-size 100 -inline-count 10 -inline-size 100 -mem-prec 5 -solver eldarica -step-heap-size 10 -solver-options debug
+-rta -bounded-heap-size 10 -heap-limit 1000 -heap-mode bounded -initial-heap-size 1 -inline-count 1000 -inline-size 1000 -mem-prec 1 -solver eldarica -step-heap-size 5000 -solver-options abstract
+-rta -specs -bounded-heap-size 1 -heap-limit -1 -heap-mode auto -initial-heap-size 5000 -inline-count 100 -inline-size 1 -mem-prec 5 -solver eldarica -step-heap-size 100 -solver-options abstract
+-rta -bounded-heap-size 1000 -heap-limit 1 -heap-mode unbounded -initial-heap-size 1000 -inline-count 1 -inline-size 1000 -mem-prec 1 -solver eldarica -step-heap-size 1 -solver-options debug
+-rta -specs -bounded-heap-size 1 -heap-limit 1000 -heap-mode auto -initial-heap-size 100 -inline-count 10 -inline-size -1 -mem-prec 1 -solver eldarica -step-heap-size 1000 -solver-options abstractPO
+-rta -bounded-heap-size 1 -heap-limit 1 -heap-mode bounded -initial-heap-size 5000 -inline-count 10 -inline-size 10 -mem-prec 4 -solver spacer -step-heap-size 1000
+-rta -specs -bounded-heap-size 5000 -heap-limit -1 -heap-mode auto -initial-heap-size 100 -inline-count -1 -inline-size -1 -mem-prec 1 -solver eldarica -step-heap-size 1
+-bounded-heap-size 10 -heap-limit 1000 -heap-mode auto -initial-heap-size 5000 -inline-count -1 -inline-size 100 -mem-prec 5 -solver spacer -step-heap-size 5000
+-rta -specs -bounded-heap-size 10 -heap-limit 10 -heap-mode auto -initial-heap-size 1000 -inline-count -1 -inline-size 100 -mem-prec 3 -solver eldarica -step-heap-size 1000 -solver-options abstractPO
+-bounded-heap-size 1000 -heap-limit 1 -heap-mode unbounded -initial-heap-size 5000 -inline-count -1 -inline-size 100 -mem-prec 5 -solver spacer -step-heap-size 1000
+-rta -bounded-heap-size 5000 -heap-limit 1000 -heap-mode auto -initial-heap-size 1 -inline-count 1 -inline-size 1 -mem-prec 1 -solver eldarica -step-heap-size 1000 -solver-options abstract
+-rta -bounded-heap-size 5000 -heap-limit 100 -heap-mode unbounded -initial-heap-size 1000 -inline-count 1000 -inline-size 1000 -mem-prec 3 -solver spacer -step-heap-size 1
+-bounded-heap-size 5000 -heap-limit 10 -heap-mode bounded -initial-heap-size 100 -inline-count 10 -inline-size -1 -mem-prec 4 -solver eldarica -step-heap-size 1 -solver-options debug
+-rta -specs -bounded-heap-size 10 -heap-limit 10 -heap-mode unbounded -initial-heap-size 5000 -inline-count 10 -inline-size 1 -mem-prec 5 -solver eldarica -step-heap-size 10 -solver-options abstract
+-bounded-heap-size 10 -heap-limit 100 -heap-mode bounded -initial-heap-size 10 -inline-count -1 -inline-size 1 -mem-prec 1 -solver eldarica -step-heap-size 1000 -solver-options abstract
+-specs -bounded-heap-size 100 -heap-limit 1 -heap-mode bounded -initial-heap-size 10 -inline-count 1000 -inline-size 100 -mem-prec 3 -solver eldarica -step-heap-size 100 -solver-options debug
+-rta -bounded-heap-size 5000 -heap-limit 100 -heap-mode bounded -initial-heap-size 10 -inline-count 1000 -inline-size 100 -mem-prec 4 -solver spacer -step-heap-size 1000
+-rta -bounded-heap-size 100 -heap-limit 10 -heap-mode unbounded -initial-heap-size 100 -inline-count -1 -inline-size 1000 -mem-prec 3 -solver eldarica -step-heap-size 100 -solver-options abstract
+-specs -bounded-heap-size 5000 -heap-limit -1 -heap-mode auto -initial-heap-size 5000 -inline-count 100 -inline-size 1000 -mem-prec 1 -solver eldarica -step-heap-size 5000 -solver-options debug
+-specs -bounded-heap-size 10 -heap-limit 1000 -heap-mode unbounded -initial-heap-size 1 -inline-count -1 -inline-size 1000 -mem-prec 2 -solver eldarica -step-heap-size 1000 -solver-options debug
+-specs -bounded-heap-size 10 -heap-limit 10 -heap-mode unbounded -initial-heap-size 1 -inline-count 1000 -inline-size 1000 -mem-prec 1 -solver spacer -step-heap-size 10
+-rta -bounded-heap-size 1 -heap-limit -1 -heap-mode auto -initial-heap-size 1 -inline-count 10 -inline-size 100 -mem-prec 3 -solver spacer -step-heap-size 10
+-bounded-heap-size 1000 -heap-limit -1 -heap-mode unbounded -initial-heap-size 10 -inline-count 1 -inline-size 100 -mem-prec 2 -solver eldarica -step-heap-size 100 -solver-options abstractPO
+-rta -bounded-heap-size 100 -heap-limit -1 -heap-mode bounded -initial-heap-size 10 -inline-count 1 -inline-size 10 -mem-prec 2 -solver spacer -step-heap-size 5000
+-specs -bounded-heap-size 1 -heap-limit -1 -heap-mode unbounded -initial-heap-size 100 -inline-count 1 -inline-size 100 -mem-prec 2 -solver eldarica -step-heap-size 5000 -solver-options abstract
+-rta -specs -bounded-heap-size 100 -heap-limit 100 -heap-mode unbounded -initial-heap-size 100 -inline-count 100 -inline-size 10 -mem-prec 1 -solver spacer -step-heap-size 100
+-rta -bounded-heap-size 1000 -heap-limit 1000 -heap-mode bounded -initial-heap-size 1 -inline-count -1 -inline-size -1 -mem-prec 4 -solver spacer -step-heap-size 100
+-specs -bounded-heap-size 10 -heap-limit 1 -heap-mode bounded -initial-heap-size 100 -inline-count 1 -inline-size 1000 -mem-prec 4 -solver eldarica -step-heap-size 100 -solver-options abstractPO
+-bounded-heap-size 1000 -heap-limit 1 -heap-mode unbounded -initial-heap-size 5000 -inline-count 10 -inline-size 1 -mem-prec 1 -solver eldarica -step-heap-size 1000
+-rta -bounded-heap-size 10 -heap-limit 1000 -heap-mode unbounded -initial-heap-size 100 -inline-count 10 -inline-size -1 -mem-prec 5 -solver eldarica -step-heap-size 10 -solver-options debug
+-bounded-heap-size 1 -heap-limit 10 -heap-mode bounded -initial-heap-size 100 -inline-count 100 -inline-size 1 -mem-prec 1 -solver eldarica -step-heap-size 10 -solver-options abstract
+-bounded-heap-size 100 -heap-limit 100 -heap-mode bounded -initial-heap-size 1 -inline-count 100 -inline-size 1 -mem-prec 3 -solver spacer -step-heap-size 1000
+-rta -specs -bounded-heap-size 100 -heap-limit 1 -heap-mode unbounded -initial-heap-size 1 -inline-count 100 -inline-size -1 -mem-prec 4 -solver eldarica -step-heap-size 10 -solver-options abstract
+-specs -bounded-heap-size 100 -heap-limit 1000 -heap-mode bounded -initial-heap-size 10 -inline-count 1000 -inline-size 10 -mem-prec 5 -solver eldarica -step-heap-size 1 -solver-options debug
+-rta -specs -bounded-heap-size 1000 -heap-limit 100 -heap-mode auto -initial-heap-size 1 -inline-count 1 -inline-size -1 -mem-prec 3 -solver eldarica -step-heap-size 5000 -solver-options abstract
+-bounded-heap-size 1000 -heap-limit 1000 -heap-mode auto -initial-heap-size 100 -inline-count 1 -inline-size 1 -mem-prec 5 -solver eldarica -step-heap-size 100 -solver-options abstractPO
+-bounded-heap-size 1000 -heap-limit -1 -heap-mode auto -initial-heap-size 100 -inline-count 1000 -inline-size -1 -mem-prec 4 -solver spacer -step-heap-size 1
+-specs -bounded-heap-size 1000 -heap-limit 10 -heap-mode bounded -initial-heap-size 5000 -inline-count -1 -inline-size 1 -mem-prec 1 -solver spacer -step-heap-size 100
+-bounded-heap-size 10 -heap-limit 1 -heap-mode unbounded -initial-heap-size 5000 -inline-count 1000 -inline-size 10 -mem-prec 3 -solver eldarica -step-heap-size 100 -solver-options abstract
+-bounded-heap-size 100 -heap-limit 10 -heap-mode bounded -initial-heap-size 1000 -inline-count 10 -inline-size 1 -mem-prec 4 -solver spacer -step-heap-size 10
+-rta -bounded-heap-size 5000 -heap-limit -1 -heap-mode unbounded -initial-heap-size 1000 -inline-count -1 -inline-size 10 -mem-prec 2 -solver spacer -step-heap-size 10
+-specs -bounded-heap-size 5000 -heap-limit -1 -heap-mode auto -initial-heap-size 10 -inline-count 1 -inline-size 10 -mem-prec 3 -solver eldarica -step-heap-size 1000 -solver-options abstractPO
+-specs -bounded-heap-size 10 -heap-limit 10 -heap-mode unbounded -initial-heap-size 100 -inline-count 1 -inline-size -1 -mem-prec 2 -solver eldarica -step-heap-size 10 -solver-options debug
+-specs -bounded-heap-size 1 -heap-limit 10 -heap-mode bounded -initial-heap-size 1 -inline-count 1 -inline-size -1 -mem-prec 5 -solver spacer -step-heap-size 1000
+-rta -bounded-heap-size 10 -heap-limit 1 -heap-mode auto -initial-heap-size 100 -inline-count 100 -inline-size 100 -mem-prec 4 -solver eldarica -step-heap-size 10 -solver-options abstractPO
+-rta -specs -bounded-heap-size 100 -heap-limit 10 -heap-mode bounded -initial-heap-size 1 -inline-count 1000 -inline-size 1 -mem-prec 2 -solver spacer -step-heap-size 1000
+-specs -bounded-heap-size 10 -heap-limit 1 -heap-mode auto -initial-heap-size 1000 -inline-count 10 -inline-size 100 -mem-prec 5 -solver eldarica -step-heap-size 1 -solver-options debug
+-rta -specs -bounded-heap-size 1000 -heap-limit 100 -heap-mode auto -initial-heap-size 5000 -inline-count 100 -inline-size -1 -mem-prec 1 -solver spacer -step-heap-size 10
+-bounded-heap-size 10 -heap-limit 10 -heap-mode auto -initial-heap-size 5000 -inline-count 10 -inline-size 1000 -mem-prec 2 -solver eldarica -step-heap-size 1 -solver-options debug
+-rta -specs -bounded-heap-size 5000 -heap-limit 1 -heap-mode auto -initial-heap-size 100 -inline-count 1000 -inline-size -1 -mem-prec 2 -solver eldarica -step-heap-size 10 -solver-options debug
+-rta -bounded-heap-size 100 -heap-limit -1 -heap-mode auto -initial-heap-size 10 -inline-count 10 -inline-size 1000 -mem-prec 1 -solver eldarica -step-heap-size 5000 -solver-options abstractPO
+-rta -bounded-heap-size 1000 -heap-limit 10 -heap-mode auto -initial-heap-size 1 -inline-count 1000 -inline-size 10 -mem-prec 2 -solver eldarica -step-heap-size 10 -solver-options debug
+-rta -specs -bounded-heap-size 10 -heap-limit 1 -heap-mode auto -initial-heap-size 100 -inline-count 1 -inline-size 1 -mem-prec 2 -solver eldarica -step-heap-size 1000 -solver-options debug
+-rta -specs -bounded-heap-size 1 -heap-limit 10 -heap-mode bounded -initial-heap-size 10 -inline-count 1 -inline-size 1000 -mem-prec 5 -solver spacer -step-heap-size 1
+-rta -specs -bounded-heap-size 10 -heap-limit -1 -heap-mode bounded -initial-heap-size 1000 -inline-count 100 -inline-size 1000 -mem-prec 2 -solver eldarica -step-heap-size 10 -solver-options abstract
+-specs -bounded-heap-size 100 -heap-limit 100 -heap-mode bounded -initial-heap-size 5000 -inline-count -1 -inline-size 1000 -mem-prec 5 -solver eldarica -step-heap-size 10 -solver-options abstract
+-rta -specs -bounded-heap-size 1000 -heap-limit -1 -heap-mode unbounded -initial-heap-size 1000 -inline-count 100 -inline-size -1 -mem-prec 5 -solver eldarica -step-heap-size 1000 -solver-options debug
+-bounded-heap-size 10 -heap-limit 100 -heap-mode bounded -initial-heap-size 10 -inline-count 10 -inline-size 10 -mem-prec 1 -solver eldarica -step-heap-size 10 -solver-options abstractPO
+-specs -bounded-heap-size 1000 -heap-limit 1000 -heap-mode unbounded -initial-heap-size 5000 -inline-count 1 -inline-size 1000 -mem-prec 2 -solver eldarica -step-heap-size 1 -solver-options abstract
+-rta -bounded-heap-size 5000 -heap-limit 100 -heap-mode bounded -initial-heap-size 10 -inline-count 1000 -inline-size 10 -mem-prec 2 -solver eldarica -step-heap-size 1000 -solver-options abstractPO
+-rta -specs -bounded-heap-size 1000 -heap-limit 100 -heap-mode auto -initial-heap-size 1000 -inline-count 1000 -inline-size 1 -mem-prec 2 -solver eldarica -step-heap-size 100 -solver-options debug
+-rta -bounded-heap-size 5000 -heap-limit 1 -heap-mode bounded -initial-heap-size 1000 -inline-count 100 -inline-size 1 -mem-prec 4 -solver spacer -step-heap-size 1
+-specs -bounded-heap-size 1000 -heap-limit 10 -heap-mode auto -initial-heap-size 10 -inline-count -1 -inline-size 10 -mem-prec 3 -solver eldarica -step-heap-size 1 -solver-options abstract
+-rta -specs -bounded-heap-size 100 -heap-limit 100 -heap-mode bounded -initial-heap-size 1000 -inline-count -1 -inline-size 1000 -mem-prec 5 -solver eldarica -step-heap-size 1000 -solver-options debug
+-rta -specs -bounded-heap-size 5000 -heap-limit 1000 -heap-mode bounded -initial-heap-size 1000 -inline-count -1 -inline-size 1 -mem-prec 3 -solver eldarica -step-heap-size 5000 -solver-options abstract
+-rta -specs -bounded-heap-size 5000 -heap-limit 1 -heap-mode auto -initial-heap-size 1000 -inline-count 1000 -inline-size 1000 -mem-prec 5 -solver spacer -step-heap-size 100
+-specs -bounded-heap-size 1000 -heap-limit 1 -heap-mode unbounded -initial-heap-size 1 -inline-count 10 -inline-size 1 -mem-prec 3 -solver spacer -step-heap-size 100
+-specs -bounded-heap-size 1 -heap-limit 1000 -heap-mode auto -initial-heap-size 1000 -inline-count -1 -inline-size 1 -mem-prec 2 -solver eldarica -step-heap-size 1 -solver-options abstractPO
+-bounded-heap-size 1 -heap-limit -1 -heap-mode bounded -initial-heap-size 1 -inline-count 1000 -inline-size -1 -mem-prec 1 -solver eldarica -step-heap-size 10 -solver-options debug
+-rta -specs -bounded-heap-size 1000 -heap-limit 10 -heap-mode auto -initial-heap-size 1 -inline-count 1000 -inline-size 1000 -mem-prec 4 -solver eldarica -step-heap-size 100 -solver-options abstract
+-rta -bounded-heap-size 100 -heap-limit 100 -heap-mode bounded -initial-heap-size 5000 -inline-count 1000 -inline-size 100 -mem-prec 3 -solver eldarica -step-heap-size 100 -solver-options abstract
+-rta -specs -bounded-heap-size 5000 -heap-limit 100 -heap-mode unbounded -initial-heap-size 1 -inline-count 1000 -inline-size 100 -mem-prec 4 -solver eldarica -step-heap-size 10 -solver-options debug
+-bounded-heap-size 1 -heap-limit 1 -heap-mode auto -initial-heap-size 10 -inline-count 1000 -inline-size 10 -mem-prec 3 -solver spacer -step-heap-size 10

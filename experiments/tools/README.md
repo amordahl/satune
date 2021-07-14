@@ -44,6 +44,7 @@ Each subdirectory contain tool specific artifacts:
  - tool/data contains Arff files used in training
  - tool/results contains the ground-truth data pre-arff
  - Config-space-Xopts.txt the configuration space
- - Configs-Xopts-t3-CA.txt sample configurations
+ - Configs-Xopts-t3-CA-actual.txt sample configurations
+  - Configs-Xopts-t3-CA.txt the tiny version of the sample configurations. For artifacts evaluation, the scripts/tools will be using these versions for quicker executions.
  - `run_exp.py` runs the the ground-truth generation dataset.
  - `run_defconfig.py` runs the tools for each benchmark in our sample set using the default configuration in Config-default.txt
