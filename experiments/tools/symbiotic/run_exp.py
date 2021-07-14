@@ -1,6 +1,11 @@
 #!/usr/bin/env python
-
-import sys,re,os
+"""
+IMPORTANT!!! This script will not actually run Symbiotic (due to a problem in the paths when using subprocess).
+Instead it will write the command to be run into the commands-to-run.sh file in this directory.
+Thus, as a follow up step, make the commands-to-run.sh executable (i.e. chmod +x commands-to-run.sh) and execute it 
+to generate the ground-truth dataset for Symboitic.
+"""
+import sys,os
 import subprocess as sp
 
 BASE_DIR='{}/satune'.format(str(os.getenv("HOME")))
@@ -15,15 +20,16 @@ for l in lines:
 
 def runPart(part):
     configsFile='Configs-16opts-t3-CA.txt'
-    samplesFile='{}/experiments/metadata/tasks/c-tasks-p{}.txt'.format(BASE_DIR, taskPart)
-    f1 = open(samplesFile.format(taskPart),'r')
+    samplesFile='{}/experiments/metadata/tasks/c-tasks-p{}.txt'.format(BASE_DIR, part)
+    f1 = open(samplesFile,'r')
     samples = f1.read().split('\n')
     f1.close()
     f2 = open(configsFile,'r')
     configs = f2.read().split('\n')
     f2.close()
 
-    f = open("results/log-ground-truth-p{}.txt".format(part), "w")
+    f = open("commands-to-run.sh".format(part), "w")
+    f.write('#!/bin/bash\n\n')
     configFixPart = ['--timeout=60','--witness','witness.graphml','--no-integrity-check']
     for sample in samples:
         srcFile, probFile = ['{}/{}'.format(BENCH_DIR, item) for item in sample.split(',')]
@@ -32,15 +38,8 @@ def runPart(part):
             dp = config + ',' + sample
             if dp in completedSet:
                 continue
-            cmd = ['symbiotic/bin/symbiotic', probFile] + configFixPart + config.split(' ')
-            cmd.append(srcFile)
-            try:
-                outs = sp.call(cmd, stdout=f, stderr=f)
-                f.write(dp + ',' + str(outs)+'\n')
-            except sp.TimeoutExpired:
-                f.write(dp + ',' + str(outs)+ ',timeout\n')
-            except:
-                f.write(dp + ',' + str(outs)+ ',incomplete\n')
+            cmd = 'symbiotic/bin/symbiotic {} {} {} {}'.format(probFile, configFixPart, config, srcFile)
+            f.write(cmd+'\n')
             f.flush()
     f.close()
 
