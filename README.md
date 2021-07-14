@@ -1,32 +1,31 @@
 # satune
 Satune: A Study-Driven Auto-Tuning Approach for Configurable Software Verification Tools.
 
-This repository contain all the artifacts related to SATune ASE 2021 publication.
+This repository contains all the artifacts related to our ASE 2021 publication, "SATune: A Study-Driven Auto-Tuning Approach for Configurable Software Verification Tools."
 
+
+# Directory Structure
 
 ## SATune
 
-SATune directory contains the source code of the autotuning tool.
-
+The SATune directory contains the source code of the autotuning tool, SATune.
 
 ## Experiments
 
-Experiments directory contain all the artifacts from the empirical analysis including the datasets for training.
+The experiments directory contain all the artifacts from the empirical analysis including the datasets for training.
 
-### Reproducing the artifacts
+# Reproducing the artifacts
 
-#### Step 0 - Prerequisites
+## Prerequisites (Only necessary if not using the VM)
 
 1. Clone this repository. 
 2. Clone the benchmarks from the sv-comp benchmark repository under the sv-comp directory as described in  `sv-comp/README.md`.
 3. Install all the dependencies for the verification tools following the instructions in the `experiments/tools/<tool>/InstallationNotes.md` files (mainly, the SMT solvers).
 
 
-#### Step 1 - Re-run the ground-truth dataset generation experiments
+## Ground-truth dataset generation experiments (Section 2; start here if using the VM)
 
-After we complete all the setup as described above, we can run the study describe in Section-2 [1].
-
-To do this, we will use `run_exp.py` scripts for each tool. To parallelize the experiments, we have divided the benchmark set into 10 partitions. As input, `run_exp.py` script take the partition index only. E.g., following command will run the experiment for the first parition benchamrks;
+4. Each tool (i.e., each directory in ~/satune/experiments/tools/{cbmc,jbmc,jayhorn,symbiotic}) has a run_exp.py script. The script accepts an index in the range [1,10], which corresponds to one data partition in ~/satune/experiments/metadata/tasks. To run the dataset generation, navigate to a tool directory and invoke the run_exp.py script as follows: 
 
 ```shell
 ./run_exp.py 1
@@ -35,7 +34,7 @@ To do this, we will use `run_exp.py` scripts for each tool. To parallelize the e
 
 Note that, these scripts use a file that contain all the configs; "Configs-Xopts-t3-CA.txt". This file is generated from the covering array and the configuration space files using the scripts under the scripts directory (see `scripts/README.md` for more details instructions).
 
-The execution logs will be saved under `tools/<tool>/results/` directory. 
+The execution logs will be saved under the `~/satune/experiments/tools/<tool>/results/` directory. 
 Next part is tool specific. We manually grep these tools files to extract the verification result and save these lines into `tools/<tool>/results/stats-all.txt` file --which is the final outcome of Step 1.
 
 #### Step 2 - Analyze the outcome of Step 1.

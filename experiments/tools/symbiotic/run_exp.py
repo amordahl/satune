@@ -14,7 +14,7 @@ for l in lines:
     completedSet.add(l)
 
 def runPart(part):
-    configsFile='Configs-16opts-t3-CA.txt'.format(configPart)
+    configsFile='Configs-16opts-t3-CA.txt'
     samplesFile='{}/experiments/metadata/tasks/c-tasks-p{}.txt'.format(BASE_DIR, taskPart)
     f1 = open(samplesFile.format(taskPart),'r')
     samples = f1.read().split('\n')
@@ -46,5 +46,4 @@ def runPart(part):
 
 if __name__ == '__main__':
     taskPartIN = sys.argv[1]
-    configPartIN = sys.argv[2]
-    runPart(taskPartIN, configPartIN)
+    runPart(taskPartIN)
