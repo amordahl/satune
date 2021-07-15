@@ -1,5 +1,5 @@
-# satune
-Satune: A Study-Driven Auto-Tuning Approach for Configurable Software Verification Tools.
+# SATune
+SATune: A Study-Driven Auto-Tuning Approach for Configurable Software Verification Tools.
 
 This repository contains all the artifacts related to our ASE 2021 publication, "SATune: A Study-Driven Auto-Tuning Approach for Configurable Software Verification Tools."
 
