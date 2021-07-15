@@ -2,6 +2,9 @@
 
 This repository contains all the artifacts related to our ASE 2021 paper, "SATune: A Study-Driven Auto-Tuning Approach for Configurable Software Verification Tools".
 
+# Virtual Machine
+
+We have made a virtual machine available at https://drive.google.com/file/d/1APJpq0V7g8s5Y5S-pTGgbfFe3lIVGvuV/view. We highly recommend reviewers use this virtual machine.
 
 # Directory Structure
 
