@@ -94,7 +94,7 @@ For other tools, simply replace the value of the --tool parameter. Running this 
 #### Step 4 - Analyze SATune results
 
 10. The following command will save all the result lines from the log files SATune generated:
-11. 
+
 ```shell
 grep "Final result:" log_anneal_cbmc_* > satune-stats/stats-cbmc.csv
 ```
