@@ -74,7 +74,8 @@ We convert the datasets to .arff format, so that they can be easily consumed by 
 pytonn generateArffFromStats.py`
 ```
 
-On our machine, this step took <1 second. The arff files are written to (...).
+On our machine, this step took <1 second.
+
 8. Then, the `createPWSplits.py` consumes the arff file from the previous step and partitions the datapoints into 5 cross-validation splits based on the splits defined in the files under `metadata/splits`.
 
 On our machine, this step took <1 second.
