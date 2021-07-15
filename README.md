@@ -25,7 +25,7 @@ In this section, we will walk through running a small subset of our experiments 
 2. Clone the benchmarks from the sv-comp benchmark repository under the sv-comp directory as described in  `sv-comp/README.md`.
 3. Install all the dependencies for the verification tools following the instructions in the `experiments/tools/<tool>/InstallationNotes.md` files (mainly, the SMT solvers).
 
-## Step 1: Ground-truth dataset generation experiments (start here if using the VM)
+### Step 1: Ground-truth dataset generation experiments (start here if using the VM)
 
 The first step of the process is to generate the ground truth datasets, as described in Section II.
 
