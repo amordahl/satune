@@ -16,37 +16,49 @@ The experiments directory contain all the artifacts from the empirical analysis 
 
 # Reproducing the artifacts
 
-## Prerequisites (Only necessary if not using the VM)
+In this section, we will walk through running a small subset of our experiments on one tool. Running on the other tools involves very similar steps. Notable exceptions will be noted. Please let us know if we missed anything.
+
+## Prerequisites
+
+**These steps are only necessary if you decide not to use the VM. We strongly suggest you use the VM provided in our Zenodo artifact. If you are using the VM, please go to step 1.**
 
 1. Clone this repository. 
 2. Clone the benchmarks from the sv-comp benchmark repository under the sv-comp directory as described in  `sv-comp/README.md`.
 3. Install all the dependencies for the verification tools following the instructions in the `experiments/tools/<tool>/InstallationNotes.md` files (mainly, the SMT solvers).
 
+## Step 1: Ground-truth dataset generation experiments (start here if using the VM)
 
-## Ground-truth dataset generation experiments (Section 2; start here if using the VM)
+The first step of the process is to generate the ground truth datasets, as described in Section II.
 
-4. Each tool (i.e., each directory in ~/satune/experiments/tools/{cbmc,jbmc,jayhorn,symbiotic}) has a run_exp.py script. The script accepts an index in the range [1,10], which corresponds to one data partition in ~/satune/experiments/metadata/tasks. To run the dataset generation, navigate to a tool directory and invoke the run_exp.py script as follows: 
+4. Navigate to /home/satune/experiments/tools/cbmc. (there is a corresponding folder for jbmc, jayhorn, and symbiotic in the tools directory, which contain similar scripts to those described below).
 
-```shell
-./run_exp.py 1
+Ground truth generation is done by the `run_exp.py` script. It accepts a single parameter, a number in the range [1,10]. This integer tells the script which split of the dataset to use (the numbers correspond to the the task lists in /home/satune/experiments/metadata/tasks; c-tasks-p{}.txt for C tasks, and java-tasks-p{}.txt for Java tasks, where {} should be replaced with a number). The script will run each configuration of the tool listed in the configuration file (in CBMC's case, this is `Configs-21opts-t3-CA-actual.txt`).
 
-```
+*Please note that, for the sake of time, we have replaced the full task lists with smaller task lists that can run quickly, and have done the same with the configuration lists. Should you want to replicate our full experiments, you need to rename `/home/satune/experiments/metadata/tasks-actual` to `/home/satune/experiments/metadata/tasks`. For the configurations, in each tool directory, you will see two files: Configs-XX-CA.txt, and Configs-XX-CA-actual.txt (where XX is a string that is different depending on the tool). Simply replace Configs-XX-CA.txt with Configs-XX-CA-actual.txt*.
 
-Note that, these scripts use a file that contain all the configs; "Configs-Xopts-t3-CA.txt". This file is generated from the covering array and the configuration space files using the scripts under the scripts directory (see `scripts/README.md` for more details instructions).
+5. We will use GNU Parallel to run all of the splits. You can run with `parallel python run_exp.sh ::: 1 2 3 4 5 6 7 8 9 10`. GNU Parallel will automatically detect the number of cores available and schedule jobs accordingly. If you are only running your virtual machine with a single core, then it will run these jobs sequentially.
 
-The execution logs will be saved under the `~/satune/experiments/tools/<tool>/results/` directory. 
-Next part is tool specific. We manually grep these tools files to extract the verification result and save these lines into `tools/<tool>/results/stats-all.txt` file --which is the final outcome of Step 1.
+As a result of running this script, results are produced in the `results` directory. Each split will produce a corresponding log-ground-truth-p{}.txt file.
 
-#### Step 2 - Analyze the outcome of Step 1.
+6. Since the logs contain both the results and the actual running logs from the experiments, we use a simple grep command to collect the information we need. From /home/satune/experiments/tools/cbmc, execute the following commands:
 
-Using `stats-all.txt`, we compute the aggregate counts of true positive/nagtive, TP/TN, false positive/negative, FP/FN for each configuration.
-The result of this manual operation is saved under 'tools/<tool>/results/Configs.csv'. The numbers in Table-II can be computed from these CSV files.
+`cd results`
+`grep -h ".prp," log-ground-truth-*.txt > stats-all.txt`
 
-Now, we use the data analysis tool JMP [2] to conduct an effect screening study. For this, we further aggregate the counts of correct (TP+TN) and incorrect (FP + FN). Then, we fit a model using the DOE module of JMP. This will give us the Analysis results with significant effects that configuration options and their settings have on the results, i.e., number of correct and incorrect verification runs, (summarized in Table-III of the paper).
+*NOTE: Should you try to generate ground truth data for JBMC or Jayhorn, replace the string grep is searching for with ",assert.prp"*
 
-Note that, we included the intermediary JMP executable scripts under the `experiment/jmp` directory (see `experiment/jmp/README.md`).
+Now, `stats-all.txt` contains the actual ground truth information we need. Specifically, each line contains the configuration, the program checked, the property checked, and the result of running in terms of the tool's exit code.
 
-#### Step 3 - Re-run SATune.
+#### Step 2: Main Effect Screening Study
+
+Once the ground truth data is saved in `stats-all.txt`, we compute the aggregate counts of true positive/negative, TP/TN, false positive/negative, FP/FN for each configuration.
+The full result of this manual operation is saved under `tools/<tool>/results/Configs.csv`. The numbers in Table-II can be computed from these CSV files.
+
+At this point, we used the data analysis tool JMP [2] to conduct an effect screening study. For this, we further aggregate the counts of correct (TP+TN) and incorrect (FP + FN). Then, we fit a model using the DOE module of JMP. This will give us the analysis results with significant effects that configuration options and their settings have on the results, i.e., number of correct and incorrect verification runs, (summarized in Table-III of the paper).
+
+We included the intermediary JMP executable scripts under the `experiment/jmp` directory (see `experiment/jmp/README.md`), which can be used to generate the information in Table-II.
+
+#### Step 3 - Run SATune
 
 ##### 3.1 - Prepare Dataset Files
 
