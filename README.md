@@ -42,8 +42,10 @@ As a result of running this script, results are produced in the `results` direct
 
 6. Since the logs contain both the results and the actual running logs from the experiments, we use a simple grep command to collect the information we need. From /home/satune/experiments/tools/cbmc, execute the following commands:
 
-`cd results`
-`grep -h ".prp," log-ground-truth-*.txt > stats-all.txt`
+```shell
+cd results
+grep -h ".prp," log-ground-truth-*.txt > stats-all.txt
+```
 
 *NOTE: Should you try to generate ground truth data for JBMC or Jayhorn, replace the string grep is searching for with ",assert.prp"*
 
@@ -68,7 +70,9 @@ We convert the datasets to .arff format, so that they can be easily consumed by 
 
 7. The `/home/satune/satune/experiments/scripts/generateArffFromStats.py` script consumes the stats-all.txt file and generates an arff file under `tools/<tool>/data`. Simply navigate to the directory and run 
 
-`pytonn generateArffFromStats.py`.
+```shell
+pytonn generateArffFromStats.py`
+```
 
 On our machine, this step took <1 second. The arff files are written to (...).
 8. Then, the `createPWSplits.py` consumes the arff file from the previous step and partitions the datapoints into 5 cross-validation splits based on the splits defined in the files under `metadata/splits`.
@@ -84,11 +88,12 @@ cd experiments/tools
 java -jar satune.jar --tool cbmc --threshold 1.0 --seed 1234 --search anneal --ml-model classification
 ```
 
-For other tools, simply replace the value of the --tool parameter. Running this command will produce log files in the `experiment/tools/` directory. If you did not run the previous step, which limits the dataset for CBMC, this command will take a long time. Using the reduced examples, this step ran in less than 10 minutes on our machine.
+For other tools, simply replace the value of the --tool parameter. Running this command will produce log files called `log_anneal_cbmc_*` in the `experiment/tools/` directory. If you did not run the previous step, which limits the dataset for CBMC, this command will take a long time. Using the reduced examples, this step ran in less than 10 minutes on our machine.
 
 #### Step 4 - Analyze SATune results
 
 10. The following command will save all the result lines from the log files SATune generated:
+11. 
 ```shell
 grep "Final result:" log_anneal_cbmc_* > satune-stats/stats-cbmc.csv
 ```
