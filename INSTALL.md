@@ -1,4 +1,6 @@
+# Reproducing the artifacts
 
+In this document, we will walk through running a small subset of our experiments on one tool. Running on the other tools involves very similar steps. Notable exceptions will be noted. Please let us know if we missed anything.
 
 ## Prerequisites
 
