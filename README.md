@@ -1,18 +1,17 @@
-# SATune
-SATune: A Study-Driven Auto-Tuning Approach for Configurable Software Verification Tools.
+# SATune: A Study-Driven Auto-Tuning Approach for Configurable Software Verification Tools.
 
-This repository contains all the artifacts related to our ASE 2021 publication, "SATune: A Study-Driven Auto-Tuning Approach for Configurable Software Verification Tools."
+This repository contains all the artifacts related to our ASE 2021 paper, "SATune: A Study-Driven Auto-Tuning Approach for Configurable Software Verification Tools".
 
 
 # Directory Structure
 
 ## SATune
 
-The SATune directory contains the source code of the autotuning tool, SATune.
+The `SATune` directory contains the source code of the autotuning tool, SATune.
 
 ## Experiments
 
-The experiments directory contain all the artifacts from the empirical analysis including the datasets for training.
+The `experiments` directory contain all the artifacts from the empirical analysis including the datasets for training.
 
 # Reproducing the artifacts
 
@@ -30,7 +29,7 @@ In this section, we will walk through running a small subset of our experiments 
 
 The first step of the process is to generate the ground truth datasets, as described in Section II.
 
-4. Navigate to `/home/satune/satune/experiments/tools/cbmc`. (there is a corresponding folder for jbmc, jayhorn, and symbiotic in the tools directory, which contain similar scripts to those described below).
+4. Navigate to `/home/satune/satune/experiments/tools/cbmc`. (There is a corresponding folder for jbmc, jayhorn, and symbiotic in the `tools` directory, which contain similar scripts to those described below).
 
 Ground truth generation is done by the `run_exp.py` script. It accepts a single parameter, a number in the range [1,10]. This integer tells the script which split of the dataset to use (the numbers correspond to the the task lists in `/home/satune/satune/experiments/metadata/tasks`; c-tasks-p{}.txt for C tasks, and java-tasks-p{}.txt for Java tasks, where {} should be replaced with a number). The script will run each configuration of the tool listed in the configuration file (in CBMC's case, this is `Configs-21opts-t3-CA-actual.txt`).
 
