@@ -4,7 +4,7 @@ This repository contains all the artifacts related to our ASE 2021 paper, "SATun
 
 # Virtual Machine
 
-We have made a virtual machine available at https://drive.google.com/file/d/1APJpq0V7g8s5Y5S-pTGgbfFe3lIVGvuV/view. We highly recommend reviewers use this virtual machine.
+We have made a virtual machine available at https://drive.google.com/file/d/1APJpq0V7g8s5Y5S-pTGgbfFe3lIVGvuV/view. We highly recommend reviewers use this virtual machine. The username is satune, and the password is 123.
 
 # Directory Structure
 
@@ -16,9 +16,6 @@ The `SATune` directory contains the source code of the autotuning tool, SATune.
 
 The `experiments` directory contain all the artifacts from the empirical analysis including the datasets for training.
 
-# Reproducing the artifacts
-
-In this section, we will walk through running a small subset of our experiments on one tool. Running on the other tools involves very similar steps. Notable exceptions will be noted. Please let us know if we missed anything.
 
 ## Prerequisites
 
